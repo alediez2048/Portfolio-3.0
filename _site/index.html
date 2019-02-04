@@ -184,44 +184,780 @@
 	</div>
 </div><!-- Document Wrapper -->
 
-<div id="home">
-  <h1>Blog Posts</h1>
-  <ul class="posts">
-    
-      <li><span>02 Jan 2018</span> &raquo; <a href="/modern/photography/2018/01/02/old-camera-copy.html">Old cameras can capture images better than nowdays camera!</a></li>
-    
-      <li><span>02 Jan 2018</span> &raquo; <a href="/modern/photography/2018/01/02/old-camera-2-copy.html">Old cameras can capture images better than nowdays camera!</a></li>
-    
-      <li><span>05 Dec 2017</span> &raquo; <a href="/jekyll/2017/12/05/multiple-categories-for-jekyll-posts-copy.html">Multiple categories for Jekyll posts</a></li>
-    
-      <li><span>05 Dec 2017</span> &raquo; <a href="/jekyll/2017/12/05/multiple-categories-for-jekyll-posts-2-copy.html">Multiple categories for Jekyll posts</a></li>
-    
-      <li><span>29 Nov 2017</span> &raquo; <a href="/git/technology/2017/11/29/dealing-with-non-fast-forward-errors-copy.html">Dealing with non-fast-forward errors</a></li>
-    
-      <li><span>29 Nov 2017</span> &raquo; <a href="/git/technology/2017/11/29/dealing-with-non-fast-forward-errors-2-copy.html">Dealing with non-fast-forward errors</a></li>
-    
-      <li><span>18 Aug 2017</span> &raquo; <a href="/technology/city/2017/08/18/new-subway-line-has-the-most-advanced-technology-in-the-world-copy.html">New subway line has the most advanced tech in the world</a></li>
-    
-      <li><span>18 Aug 2017</span> &raquo; <a href="/technology/city/2017/08/18/new-subway-line-has-the-most-advanced-technology-in-the-world-2-copy.html">New subway line has the most advanced tech in the world</a></li>
-    
-      <li><span>21 Jul 2017</span> &raquo; <a href="/modern/2017/07/21/state-of-2018-web-development-copy.html">State of 2018 web development</a></li>
-    
-      <li><span>18 May 2017</span> &raquo; <a href="/modern/2017/05/18/how-to-become-a-top-freelancer-copy.html">How to become a top freelancer</a></li>
-    
-      <li><span>24 Apr 2017</span> &raquo; <a href="/travel/2017/04/24/four-ways-to-cheer-yourself-up-on-blue-monday-copy.html">Four ways to cheer yourself up on Blue Monday!</a></li>
-    
-      <li><span>15 Feb 2017</span> &raquo; <a href="/modern/2017/02/15/review-5-top-supercars-copy.html">Review of 5 top supercars</a></li>
-    
-      <li><span>03 Jan 2017</span> &raquo; <a href="/modern/2017/01/03/principles-of-engineering-copy.html">Principles of Engineering in modern era</a></li>
-    
-      <li><span>21 Jul 2016</span> &raquo; <a href="/jekyll/update/2016/07/21/test-copy.html">How to build a Quality Portfolio on a Budget</a></li>
-    
-      <li><span>21 Jul 2016</span> &raquo; <a href="/jekyll/update/2016/07/21/How-to-build-a-quality-portfolio-on-a-budget-copy.html">How to build a Quality Portfolio on a Budget</a></li>
-    
-      <li><span>20 Apr 2014</span> &raquo; <a href="/jekyll/update/2014/04/20/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
-    
-  </ul>
-</div>
+<!--- Hero Section ====================================== -->
+
+
+<section id="slider" class="slider slider-dark">
+              <div class="element-with-video-bg jquery-background-video-wrapper" style="background-image: url(/assets/very-open-space/snapshots/very-open-space.jpg);"></div>
+              <video data-bgvideo="true" autoplay loop muted class="my-background-video jquery-background-video" poster="/assets/very-open-space/snapshots/very-open-space.jpg">
+                  <source src="/assets/very-open-space/MP4/very-open-space.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                  <source src="/assets/very-open-space/WEBM/very-open-space.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+              </video>
+
+              <div class="pos-vertical-center">
+                  <div class="container">
+                      <div class="row">
+                          <div class="col-xs-12 col-sm-12 col-md-12">
+                              <div class="slide-action mb-50"></div>
+                              <div id="slide--headline" class="slide--headline text-heading">
+                                <span class="typed-text" data-typed-string="Hi there!, Welcome to Latin Digital, We Empower Brands through superior technology, Make your self @ home
+                                "> </span>
+                              </div>
+                          </div>
+                          <div class="col-xs-12 col-sm-12 col-md-6">
+                              <div id="slide--bio" class="slide--bio text-heading">Product Developer, Digital Marketer and Ping Pong Master</div>
+                          </div>
+                      </div>
+
+
+
+                      <div class="slide-action" style="text-align:center; padding-bottom:30px;">
+                        <a class="btn btn--secondary btn--white mr-30" href="/blog/">Learn More</a>
+                        <a class="btn btn--white btn--bordered" id="scrollToBottom" href="#">Get Started</a>   </div>
+                  </div>
+              </div>
+
+</section>
+
+
+    <script type = "text/javascript">
+        $(function () {
+            $('#scrollToBottom').bind("click", function () {
+                $('html, body').animate({ scrollTop: $(document).height() }, 4200);
+                return false;
+            });
+            $('#scrollToTop').bind("click", function () {
+                $('html, body').animate({ scrollTop: 0 }, 5200);
+                return false;
+            });
+        });
+    </script>
+
+
+
+<!-- 
+<div id="google_translate_element"></div><script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
+}
+</script>
+ -->
+
+<style>
+
+html {
+  font-size: 1.9em;
+}
+body {
+  background-color: #fff;
+
+}
+
+.social-media{
+  padding-top:50px;
+}
+/* Wrapper */
+.icon-button {
+  background-color: white;
+  border-radius: 2.6rem;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.3rem;
+  height: 2.6rem;
+  line-height: 2.6rem;
+  margin: 0 5px;
+  position: relative;
+  text-align: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 2.6rem;
+}
+
+/* Circle */
+.icon-button span {
+  border-radius: 0;
+  display: block;
+  height: 0;
+  left: 50%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: all 0.3s;
+     -moz-transition: all 0.3s;
+       -o-transition: all 0.3s;
+          transition: all 0.3s;
+  width: 0;
+}
+.icon-button:hover span {
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 2.6rem;
+  margin: -1.3rem;
+}
+
+/* Icons */
+.icon-button i {
+  background: none;
+  color: white;
+  height: 2.6rem;
+  left: 0;
+  line-height: 2.6rem;
+  position: absolute;
+  top: 0;
+  -webkit-transition: all 0.3s;
+     -moz-transition: all 0.3s;
+       -o-transition: all 0.3s;
+          transition: all 0.3s;
+  width: 2.6rem;
+  z-index: 10;
+}
+
+
+
+
+
+.twitter span {
+  background-color: #4099ff;
+}
+.facebook span {
+  background-color: #3B5998;
+}
+.google-plus span {
+  background-color: #db5a3c;
+}
+.tumblr span {
+  background-color: #34526f;
+}
+.instagram span {
+  background-color: #517fa4;
+}
+.youtube span {
+  background-color: #bb0000;
+}
+.linkedin span {
+  background-color: #0077b5;
+}
+
+
+
+.icon-button .fa-twitter {
+  color: #4099ff;
+}
+.icon-button .fa-facebook {
+  color: #3B5998;
+}
+.icon-button .fa-tumblr {
+  color: #34526f;
+}
+.icon-button .fa-google-plus {
+  color: #db5a3c;
+}
+.icon-button .fa-instagram {
+  color: #517fa4;
+}
+.icon-button .fa-youtube {
+  color: #bb0000;
+}
+.icon-button .fa-linkedin {
+  color: #0077b5;
+}
+
+
+
+
+.icon-button:hover .fa-twitter,
+.icon-button:hover .fa-facebook,
+.icon-button:hover .fa-google-plus,
+.icon-button:hover .fa-tumblr,
+.icon-button:hover .fa-instagram,
+.icon-button:hover .fa-youtube,
+.icon-button:hover .fa-pinterest,
+.icon-button:hover .fa-linkedin{
+  color: white;
+}
+
+@media all and (max-width: 680px) {
+  .icon-button {
+    border-radius: 1.6rem;
+    font-size: 0.8rem;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    width: 1.6rem;
+  }
+
+  .icon-button:hover span {
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 1.6rem;
+    margin: -0.8rem;
+  }
+
+  /* Icons */
+  .icon-button i {
+    height: 1.6rem;
+    line-height: 1.6rem;
+    width: 1.6rem;
+  }
+  body {
+
+    padding: 10px;
+  }
+  .pinterest {
+   display: none;
+  }
+
+}
+
+</style>
+
+
+<section id="workflow" class="workflow">
+    <div class="heading heading-2 mb-40 text--center">
+          <p class="heading--subtitle">Start with Why</p>
+          <h2 class="heading--title"></h2>
+          <div class="divider--line divider--center"></div>
+    </div>
+  <div class="container">
+    <div class="row clearfix">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+      </div><!-- .col-md-8 end -->
+    </div><!-- .row end -->
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12">
+        <div class="tabs">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs">
+          <li class="active"><a href="#Brainstorming" data-toggle="tab"></a>
+          </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="Brainstorming">
+            <div class="row">
+              <div class="col-xs-12 col-sm-5 col-md-6 pr-0">
+                <div class="col-img">
+                  <div class="bg-section">
+                    <img src= /assets/images/workflow/1.jpg alt="Background"/>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xs-12 col-sm-7 col-md-6 pl-0">
+                <div class="col-content bg-white">
+                  <h4 style="font-size: 30px; text-align:center;" >Your Technology Partner</h4>
+                  <p style="text-align:justify;text-justify=inter-word;"> 
+
+                    Latin Digital started out with the purpose to bridge the gap between Businesses and their Digital Blue Prints. We provide custom solutions and support using the latest technologies and frameworks in the industry. In this site you can see our previous work as well as learn more about our solutions. Reach out to us through the chatbot to learn more. 
+
+<!-- 
+                    At Latin Digital we aim to bridge the gap between Latin Businesses and American Software and Design Standards. We recruit the best Latin American Talent from companies like IBM, Microsoft, Google to bring their expertise in the digital space to top Latin American companies.
+
+                  We provide Powerful and Scalable Digital Solutions for Businesses around the World but our Latin background makes us a perfect fit for the South American Market. --><!--  In this site you can see our background and previous work as well as Projects and Organizations we are actively involved in. Make sure to check out the Blog and reach out through Email or through one of the following. --></p>
+
+                  <div class="social-media" style="text-align:center;" id="social-icons">
+                      <a href="https://twitter.com/JAlediez2408" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a>
+                      <a href="https://www.facebook.com/LatinDigital.io/?modal=admin_todo_tour" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a>
+                      <a href="https://www.linkedin.com/company/latindigital/" class="icon-button linkedin"><i class="fa fa-linkedin"></i><span></span></a>
+                      <a href="https://plus.google.com/u/0/111877386748211344830" class="icon-button google-plus"><i class="fa fa-google-plus"></i><span></span></a>
+                  </div>
+                </div>
+              </div>
+            </div><!-- .row end -->
+          </div><!-- .tab-pane end -->
+          </div>
+        </div>
+      </div>
+      <!-- .col-md-12 end -->
+    </div>
+    <!-- .row end -->
+  </div>
+  <!-- .container end -->
+</section> <!-- #workflow end -->
+
+
+
+<style>
+
+.process-panel .process-content h3{
+	font-size:25px;
+}
+
+
+.process-panel .process-content p{
+font-size:16px;
+padding-top:50px;
+}
+
+.process-panel .process-img .process-overlay {
+  background-color:transparent;
+}
+
+</style>
+<section id="feature3" class="feature feature-left feature-heading feature-3 bg-white">
+	<div class="container">
+		<div class= "title-area">
+		<div class="row">
+    <div class="heading heading-2 mb-40 text--center">
+    	
+          <p class="heading--subtitle">Now this is</p>
+          <h2 class="heading--title">What we do</h2>
+          <div class="divider--line divider--center"></div>
+     
+    </div>
+			<!-- Panel #1 -->
+					<div class="row">
+			<!-- Process #1 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 process-panel text--center">
+					<div class="process-img">
+						<img src="assets/images/process/process-1.png" alt="process image">
+						<div class="process-overlay">
+	
+						</div>
+					</div>
+					<div class="process-content">
+						<h3>Strategy</h3>
+						<p>We conduct research to drive product innovation and work to bridge the gap between business objectives and user experiences.</p>
+					</div>
+				
+			</div><!-- .col-md-3 end -->
+			
+			<!-- Process #2 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 process-panel text--center">
+					<div class="process-img">
+						<img src="assets/images/process/process-2.png" alt="process image">
+						<div class="process-overlay">
+	
+						</div>
+					</div>
+					<div class="process-content">
+						<h3>UX & UI</h3>
+						<p>We create intuitive interfaces, experiences, and focus on ease of use by the end user at every step of the product cycle.</p>
+					</div>
+				
+			</div><!-- .col-md-3 end -->
+			
+			<!-- Process #3 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 process-panel text--center">
+					<div class="process-img">
+						<img src="assets/images/process/process-3.png" alt="process image">
+						<div class="process-overlay">
+			
+						</div>
+					</div>
+					<div class="process-content">
+						<h3>Development</h3>
+						<p>We choose the proper framework for the project and build the application from the ground up while conducting rigorous QA at every step</p>
+					</div>
+				
+			</div><!-- .col-md-3 end -->
+			
+			<!-- Process #4 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 process-panel text--center">
+					<div class="process-img">
+						<img src="assets/images/process/process-4.png" alt="process image">
+						<div class="process-overlay">
+			
+						</div>
+					</div>
+					<div class="process-content">
+						<h3>Optimization</h3>
+						<p>We provide you with the tools to increase traffic to your site or app and use the latest techniques in digital marketing for analyzing that traffic.</p>
+					</div>
+				
+			</div><!-- .col-md-3 end -->
+		</div><!-- .row end -->
+
+		</div><!-- .row end -->
+	</div> <!-- title-area-->
+	
+	</div><!-- .container end -->
+
+</section><!-- .feature3 end -->
+
+
+<style>
+.workflow {
+
+    padding: 50px; 
+}
+
+</style>
+
+<section id="workflow" class="workflow">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+        <div class="heading heading-2 mb-50 text--center">
+          <p class="heading--subtitle">Here's some of my</p>
+          <h2 class="heading--title heding--center">Recent Collaborations </h2>
+          <div class="divider--line divider--center"></div>
+        </div>
+      </div><!-- .col-md-8 end -->
+    </div><!-- .row end -->
+  </div>
+  <!-- .container end -->
+</section>
+<!-- #skills4 end -->
+
+
+<!-- Portfolio 4 Column
+============================================= -->
+
+
+
+<section id="portfolio" class="section portfolio portfolio-gallery portfolio-4col pt-0 pb-0">
+	<div class="container-fluid pr-0 pl-0">
+		<div class="row">
+			<!-- Portfolio Filter
+			============================================= -->
+			<div class="col-xs-12 col-sm-12 col-md-12 portfolio-filter hidden-lg hidden-md">
+				<ul class="list-inline mb-0">
+					<li><a class="active-filter" href="#" data-filter="*">All</a></li>
+					<li><a href="#" data-filter=".filter-branding">Branding</a></li>
+					<li><a href="#" data-filter=".filter-packaging">packaging</a></li>
+					<li><a href="#" data-filter=".filter-print">Print</a></li>
+					<li><a href="#" data-filter=".filter-web">Web Development</a></li>
+				</ul>
+			</div>
+			<!-- .Portfolio-filter end --> 
+		</div>
+		<div id="portfolio-all" class="row-no-padding">
+			<!-- Portfolio #1 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 portfolio-item filter-print">
+				<div class="portfolio--img">
+					<img src="assets/images/portfolio/gallery/3col/1.jpg" alt="Portfolio Item">
+					<div class="portfolio--hover">
+						<div class="portfolio--action">
+							<div class="pos-vertical-center">
+
+<div class="portfolio--title">
+									<h4><a href="https://www.stratatrust.com/">Strata Trust</a></h4>
+								</div> 
+								<div class="portfolio--cat">
+									<a href="#">Web Development</a> , <a href="#">Front End</a>
+								</div>
+							</div>
+						</div><!-- .Portfolio-action end -->
+					</div><!-- .Portfolio-hover end --> 
+				</div><!-- .Portfolio-img end -->
+			</div><!-- . portfolio-item end -->
+			
+			<!-- Portfolio #2 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 portfolio-item filter-packaging">
+				<div class="portfolio--img">
+					<img src="assets/images/portfolio/gallery/3col/2.jpg" alt="Portfolio Item">
+					<div class="portfolio--hover">
+						<div class="portfolio--action">
+							<div class="pos-vertical-center">
+
+<div class="portfolio--title">
+									<h4><a href="https://www.clearesult.com">Clear Result</a></h4>
+								</div>
+								<div class="portfolio--cat">
+									<a href="#">Web Development</a> , <a href="#">Front End</a>
+								</div>
+							</div>
+						</div><!-- .Portfolio-action end -->
+					</div><!-- .Portfolio-hover end --> 
+				</div><!-- .Portfolio-img end -->
+			</div><!-- . portfolio-item end -->
+			
+			<!-- Portfolio #3 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 portfolio-item filter-branding">
+				<div class="portfolio--img">
+					<img src="assets/images/portfolio/gallery/3col/3.jpg" alt="Portfolio Item">
+					<div class="portfolio--hover">
+						<div class="portfolio--action">
+							<div class="pos-vertical-center">
+
+<div class="portfolio--title">
+									<h4><a href="https://www.springbox.com/">Springbox</a></h4>
+								</div>
+								<div class="portfolio--cat">
+									<a href="#">Web Development</a> , <a href="#">Front End</a>
+								</div>
+							</div>
+						</div><!-- .Portfolio-action end -->
+					</div><!-- .Portfolio-hover end --> 
+				</div><!-- .Portfolio-img end -->
+			</div><!-- . portfolio-item end -->
+			
+						<!-- Portfolio #4 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 portfolio-item filter-branding">
+				<div class="portfolio--img">
+					<img src="assets/images/portfolio/gallery/3col/4.jpg" alt="Portfolio Item">
+					<div class="portfolio--hover">
+						<div class="portfolio--action">
+							<div class="pos-vertical-center">
+
+<div class="portfolio--title">
+									<h4><a href="https://madison.net/">Madison Industries</a></h4>
+								</div>
+								<div class="portfolio--cat">
+									<a href="#">Web Development</a> , <a href="#">Front End</a>
+								</div>
+							</div>
+						</div><!-- .Portfolio-action end -->
+					</div><!-- .Portfolio-hover end --> 
+				</div><!-- .Portfolio-img end -->
+			</div><!-- . portfolio-item end -->
+			
+			<!-- Portfolio #5 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 portfolio-item filter-print">
+				<div class="portfolio--img">
+					<img src="assets/images/portfolio/gallery/3col/5.jpg" alt="Portfolio Item">
+					<div class="portfolio--hover">
+						<div class="portfolio--action">
+							<div class="pos-vertical-center">
+
+<div class="portfolio--title">
+									<h4><a href="https://www.zephyrhillswater.com/home">Zephirhills Water</a></h4>
+								</div>
+								<div class="portfolio--cat">
+									<a href="#">Web Development</a> , <a href="#">Front End</a>
+								</div>
+							</div>
+						</div><!-- .Portfolio-action end -->
+					</div><!-- .Portfolio-hover end --> 
+				</div><!-- .Portfolio-img end -->
+			</div><!-- . portfolio-item end -->
+			
+			<!-- Portfolio #6 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 portfolio-item filter-branding">
+				<div class="portfolio--img">
+					<img src="assets/images/portfolio/gallery/3col/6.jpg" alt="Portfolio Item">
+					<div class="portfolio--hover">
+						<div class="portfolio--action">
+							<div class="pos-vertical-center">
+
+<div class="portfolio--title">
+									<h4><a href="https://www.arrowheadwater.com/">Arrowhead Water</a></h4>
+								</div>
+								<div class="portfolio--cat">
+									<a href="#">Web Development</a> , <a href="#">Front End</a>
+								</div>
+							</div>
+						</div><!-- .Portfolio-action end -->
+					</div><!-- .Portfolio-hover end --> 
+				</div><!-- .Portfolio-img end -->
+			</div><!-- . portfolio-item end -->
+			
+			<!-- Portfolio #7 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 portfolio-item filter-web">
+				<div class="portfolio--img">
+					<img src="assets/images/portfolio/gallery/3col/7.jpg" alt="Portfolio Item">
+					<div class="portfolio--hover">
+						<div class="portfolio--action">
+							<div class="pos-vertical-center">
+
+<div class="portfolio--title">
+									<h4><a href="https://www.polandspring.com/">Poland Springs</a></h4>
+								</div>
+								<div class="portfolio--cat">
+									<a href="#">Web Development</a> , <a href="#">Front End</a>
+								</div>
+							</div>
+						</div><!-- .Portfolio-action end -->
+					</div><!-- .Portfolio-hover end --> 
+				</div><!-- .Portfolio-img end -->
+			</div><!-- . portfolio-item end -->
+			
+			<!-- Portfolio #8 -->
+			<div class="col-xs-12 col-sm-6 col-md-3 portfolio-item filter-branding">
+				<div class="portfolio--img">
+					<img src="assets/images/portfolio/gallery/3col/8.jpg" alt="Portfolio Item">
+					<div class="portfolio--hover">
+						<div class="portfolio--action">
+							<div class="pos-vertical-center">
+
+<div class="portfolio--title">
+									<h4><a href="https://www.sweetleaftea.com/">Sweet Leaf Tea</a></h4>
+								</div>
+								<div class="portfolio--cat">
+									<a href="#">Web Development</a> , <a href="#">Front End</a>
+								</div>
+							</div>
+						</div><!-- .Portfolio-action end -->
+					</div><!-- .Portfolio-hover end --> 
+				</div><!-- .Portfolio-img end -->
+			</div><!-- . portfolio-item end -->
+		</div><!-- .row end -->
+	</div><!-- .container-fluid end -->
+</section><!-- #portfolio end -->
+
+
+
+
+<section id="testimonia2" class="testimonial testimonial-wide testimonial-2 bg-white">
+	<div class="container">
+		  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
+        <div class="heading heading-2 mb-50 text--center">
+          <p class="heading--subtitle">These are some of my</p>
+          <h2 class="heading--title heding--center">References</h2>
+          <div class="divider--line divider--center"></div>
+        </div>
+      </div><!-- .col-md-8 end -->
+    </div><!-- .row end -->
+  </div>
+		<div class="row">
+			<div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+				 <div id="testimonial-wide" class="carousel carousel-dots" data-slide="1" data-slide-rs="1" data-autoplay="false" data-nav="false" data-dots="true" data-space="0" data-loop="true" data-speed="800">
+					<!-- Testimonial #1 -->
+					<div class="testimonial-panel">
+					<div class="testimonial--icon"></div><!-- .testimonial-icon end -->
+						<div class="testimonial--body">
+							<p>Within a few weeks of joining Springbox Alejandro was treated as a regular developer on the team, where he benefitted tremendously from working directly with Springbox Architects on complex projects. Alejandro became so valuable to the team, that I allowed him opt out from a planned intern group project so he could continue contributing as a de facto member of the Technology team.
+							</p>
+						</div><!-- .testimonial-body end -->
+
+						<div class="testimonial--meta">
+							<div class="testimonial--meta-img">
+								<img src=/assets/images/testimonial/paul.png alt="Testimonial Author">
+							</div>
+							<h4>Paul Boomgaart</h4>
+							<p>CTO at Springbox Digital Partners</p>
+						</div><!-- .testimonial-meta end -->
+					</div><!-- .testimonial-panel end -->
+
+					<!-- Testimonial # -->
+					<div class="testimonial-panel">
+						<div class="testimonial--icon"></div><!-- .testimonial-icon end -->
+						<div class="testimonial--body">
+							<p>Alejandro is an active 3 Day Startup team member that holds regular 3DS events as a 3DS Facilitator. He earned the 3DS Leadership Award and became a 3DS evangelist since.</p>
+						</div><!-- .testimonial-body end -->
+
+						<div class="testimonial--meta">
+							<div class="testimonial--meta-img">
+								<img src=/assets/images/testimonial/cam.png alt="Testimonial Author">
+							</div>
+							<h4>Cam Houser</h4>
+							<p>CEO 3 Day Startup </p>
+						</div><!-- .testimonial-meta end -->
+					</div><!-- .testimonial-panel end -->
+
+					<!-- Testimonial #1 -->
+					<div class="testimonial-panel">
+						<div class="testimonial--icon"></div><!-- .testimonial-icon end -->
+						<div class="testimonial--body">
+							<p>I met Alejandro and we instantly connected. We attended a Tony Robbins' conference and walked across burning coals. He is a go-getter than loves adventure and making people's days better. Alejandro is driven and and active in Austin's startup scene.</p>
+						</div><!-- .testimonial-body end -->
+
+						<div class="testimonial--meta">
+							<div class="testimonial--meta-img">
+								<img src=/assets/images/testimonial/jd.png alt="Testimonial Author">
+							</div>
+							<h4>JD Weinstein</h4>
+							<p>Venture Labs Lead at </p>
+						</div><!-- .testimonial-meta end -->
+					</div><!-- .testimonial-panel end -->
+
+
+					<!-- Testimonial #1 -->
+					<div class="testimonial-panel">
+						<div class="testimonial--icon"></div><!-- .testimonial-icon end -->
+						<div class="testimonial--body">
+							<p>Alejandro is a major asset for any organization that values innovation and creative work. After many failed invitations to come to UT as a guest speaker I finally agreed to come and saw first hand his work and dedication to the school. </p>
+						</div><!-- .testimonial-body end -->
+						<div class="testimonial--meta">
+							<div class="testimonial--meta-img">
+								<img src=/assets/images/testimonial/gerardo.png alt="Testimonial Author">
+							</div>
+							<h4>Gerardo Casanova</h4>
+							<p>General Manager ESPN Latin America</p>
+						</div><!-- .testimonial-meta end -->
+					</div><!-- .testimonial-panel end -->
+				</div>
+			</div><!-- .col-md-12 end -->
+		</div><!-- .row end -->
+	</div><!-- .container end -->
+</section><!-- #testimonial2 end -->
+
+
+    <style>
+       #map {
+        height:650px;
+        width: 100%;
+       }
+
+       .contact-row{
+   	    margin-top: -422px;
+    		position: relative;
+    		z-index: 99;
+       }
+
+	.contact-panel {
+	    text-align: center;
+	    padding: 30px 30px;
+
+	}
+    </style>
+
+<section id="contact" class="contact pb-0 pt-0">
+	<div class="container-fluid pr-0 pl-0">
+		<div class="row">
+			<div class="col-xs-12  col-sm-12  col-md-12 pr-0 pl-0">
+    <div id="map"></div>
+			</div>
+		</div>
+	</div>
+
+		<div class="container">
+		<div class="row contact-row">
+			<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
+				<div class="heading heading-6 text--center mb-70">
+					<p class="heading--subtitle text-black"></p>
+					<h4 class="heading--title  text-grey" style="margin-bottom:104px; color:#333;">Contact Us</h4> 
+				</div>
+			</div><!-- .col-md-8 end -->
+			<div class="clearfix"></div>
+			<!-- Contact Panel #1 -->
+			<div class="col-xs-12 col-sm-6 col-md-4 contact-panel">
+				<i class="fa fa-map-marker"></i>
+				<h3>Our Address</h3>
+				<p>600 Congress Ave, Austin, TX 78701
+</p>
+				<a class="contact-action" href="#">Directions</a>
+			</div><!-- .col-md-4 end -->
+			<!-- Contact Panel #2 -->
+			<div class="col-xs-12 col-sm-6 col-md-4 contact-panel">
+				<i class="fa fa-phone"></i>
+				<h3>Our Phone</h3>
+				<p>Office Telephone : 512-709-7014 </p>
+				<a class="contact-action" href="#">Call Us</a>
+			</div><!-- .col-md-4 end -->
+			<!-- Contact Panel #3 -->
+			<div class="col-xs-12 col-sm-6 col-md-4 contact-panel">
+				<i class="fa fa-envelope"></i>
+				<h3>Our Email</h3>
+				<p>Main Email : alejandro@latindigital.io </p>
+				<a class="contact-action" href="#">Send a Message</a>
+			</div><!-- .col-md-4 end -->
+			<!-- Contact Panel #4 -->
+		</div><!-- .row end -->
+	</div><!-- .container end -->
+</section><!-- #contact end -->
+
+    <script>
+      function initMap() {
+        var uluru = {lat: 30.267153, lng: -97.743061};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 10,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCrfqxnEuRipCDCjiYgF4LJ4CyfFn4r2kw&callback=initMap">
+    </script>
+
+
 
     </body>
 <footer id="footer" class="footer footer-1">
@@ -282,6 +1018,8 @@
 <script type="text/javascript" src="https://unpkg.com/isotope-layout@3.0/dist/isotope.pkgd.js"></script>
 <!-- RS Configration JS Files -->
 <script src="/js/rsconfig.js"></script>
+
+  <script src="/js/jquery.background-video.js"></script>
 
 
 
