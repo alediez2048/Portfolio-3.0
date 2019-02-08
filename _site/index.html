@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head lang="en">
 
       <meta charset="utf-8">
+	  <title>Latin Digital - Alejandro Diez</title>
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <!--IE Compatibility Meta-->
       <meta name="author" content="zytheme"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="description" content="Latin Digital - Alejandro Diez">
+      <meta name="keywords" content="Product Development Digital Marketing UX UI">
       <link href="/assets/images/favicon/favicon.png" rel="icon">
       <!-- Fonts
           ============================================= -->
@@ -18,6 +20,7 @@
       <link href="/css/external.css" rel="stylesheet">
       <link href="/css/bootstrap.min.css" rel="stylesheet">
       <link href="/css/main.css" rel="stylesheet">
+      <link href="/css/patch-lighthouse.css" rel="stylesheet">
 
       <!-- RS5.0 Main Stylesheet -->
       <link rel="stylesheet" type="text/css" href="/revolution/css/settings.css">
@@ -28,8 +31,6 @@
       <meta name="google-site-verification" content="lGL0ars_GTR5x6kkKBeqdPhl6SPVgoPXt7yaTAWJIok" />
       <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
-      <!-- Indemandly-->
-      <script type="text/javascript">!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)</script>
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118145960-1"></script>
@@ -42,6 +43,7 @@
       </script>
 
     </head>
+
     <body>
 
   <div id="wrapper" class="wrapper clearfix">
@@ -107,8 +109,8 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2">
                   <form class="form-search" autocomplete="off">
-                    <input id="search-nav" type="search" class="form-control" placeholder="Search&hellip;" autocomplete="off">
-                    <button class="btn" type="button"><i class="fa fa-search"></i></button>
+                    <input id="search-nav" type="search" class="form-control" placeholder="Search&hellip;" autocomplete="off" aria-label="Search" title="Search">
+                    <button class="btn" type="button"><i class="fa fa-search"></i><span class="for-readers">Search</span></button>
                   </form><!-- .form-search end -->
                 </div><!-- .col-md-8 end -->
               </div><!-- .row end -->
@@ -116,7 +118,7 @@
           </div>
           <div class="container container-nav">
             <div class="row">
-              <div id="results-nav" class="all-posts results col-xs-12 col-sm-12 col-md-12"></div>
+              <div id="results-nav" class="all-posts results col-xs-12 col-sm-12 col-md-12"><span class="for-readers">Close</span></div>
             </div>
           </div>
 
@@ -155,16 +157,16 @@
   </ul>
 <div class="clearfix"></div>
   <div class="social-share">
-    <a class="share-facebook" href="#"><i class="fa fa-facebook"></i></a>
-    <a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
-    <a class="share-google-plus" href="#"><i class="fa fa-google-plus"></i></a>
-    <a class="share-linkedin" href="#"><i class="fa fa-linkedin"></i></a>
+    <a class="share-facebook" href="#"><i class="fa fa-facebook"></i><span class="for-readers">Share on Facebook</span></a>
+    <a class="share-twitter" href="#"><i class="fa fa-twitter"><span class="for-readers">Share on Twitter</span></i></a>
+    <a class="share-google-plus" href="#"><i class="fa fa-google-plus"></i><span class="for-readers">Share on G+</span></a>
+    <a class="share-linkedin" href="#"><i class="fa fa-linkedin"></i><span class="for-readers">Share on LinkedIn</span></a>
   </div>
   <div class="clearfix"></div>
   <div class="copywright">
     <span>&copy; 2018</span><a></a>
   </div>
-<a class="module-cancel" href="#"><i class="fa fa-close"></i></a>
+<a class="module-cancel" href="#"><i class="fa fa-close"></i><span class="for-readers">Close</span></a>
 </div>          </div>
         </div>
       </div>
@@ -172,10 +174,11 @@
     </div>
     <!-- /.container-fluid -->
 
-    
+
   </nav>
 
 </header>
+
 <!-- <div class="preloader">
 	<div class="spinner">
 	  <div class="bounce1"></div>
@@ -212,7 +215,7 @@
 
 
                       <div class="slide-action" style="text-align:center; padding-bottom:30px;">
-                        <a class="btn btn--secondary btn--white mr-30" href="/blog/">Learn More</a>
+                        <a class="btn btn--secondary btn--white mr-30" href="/blog/">Learn More<span class="for-readers"> in blog</span></a>
                         <a class="btn btn--white btn--bordered" id="scrollToBottom" href="#">Get Started</a>   </div>
                   </div>
               </div>
@@ -235,13 +238,14 @@
 
 
 
-<!-- 
+<!--
 <div id="google_translate_element"></div><script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');
 }
 </script>
  -->
+
 
 <style>
 
@@ -413,7 +417,7 @@ body {
 </style>
 
 
-<section id="workflow" class="workflow">
+<section id="start-with" class="workflow">
     <div class="heading heading-2 mb-40 text--center">
           <p class="heading--subtitle">Start with </p>
           <h2 class="heading--title">Man </h2>
@@ -429,7 +433,7 @@ body {
         <div class="tabs">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs">
-          <li class="active"><a href="#Brainstorming" data-toggle="tab"></a>
+          <li class="active"><a href="#Brainstorming" data-toggle="tab"><span class="for-readers">Brainstorming</span></a>
           </li>
         </ul>
         <!-- Tab panes -->
@@ -446,20 +450,20 @@ body {
               <div class="col-xs-12 col-sm-7 col-md-6 pl-0">
                 <div class="col-content bg-white">
                   <h4 style="font-size: 30px; text-align:center;" >Your Technology Partner</h4>
-                  <p style="text-align:justify;text-justify=inter-word;"> 
+                  <p style="text-align:justify;text-justify=inter-word;">
 
-                    Latin Digital started out with the purpose to bridge the gap between Businesses and their Digital Blue Prints. We provide custom solutions and support using the latest technologies and frameworks in the industry. In this site you can see our previous work as well as learn more about our solutions. Reach out to us through the chatbot to learn more. 
+                    Latin Digital started out with the purpose to bridge the gap between Businesses and their Digital Blue Prints. We provide custom solutions and support using the latest technologies and frameworks in the industry. In this site you can see our previous work as well as learn more about our solutions. Reach out to us through the chatbot to learn more.
 
-<!-- 
+<!--
                     At Latin Digital we aim to bridge the gap between Latin Businesses and American Software and Design Standards. We recruit the best Latin American Talent from companies like IBM, Microsoft, Google to bring their expertise in the digital space to top Latin American companies.
 
                   We provide Powerful and Scalable Digital Solutions for Businesses around the World but our Latin background makes us a perfect fit for the South American Market. --><!--  In this site you can see our background and previous work as well as Projects and Organizations we are actively involved in. Make sure to check out the Blog and reach out through Email or through one of the following. --></p>
 
                   <div class="social-media" style="text-align:center;" id="social-icons">
-                      <a href="https://twitter.com/JAlediez2408" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span></a>
-                      <a href="https://www.facebook.com/LatinDigital.io/?modal=admin_todo_tour" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span></a>
-                      <a href="https://www.linkedin.com/company/latindigital/" class="icon-button linkedin"><i class="fa fa-linkedin"></i><span></span></a>
-                      <a href="https://plus.google.com/u/0/111877386748211344830" class="icon-button google-plus"><i class="fa fa-google-plus"></i><span></span></a>
+                      <a href="https://twitter.com/JAlediez2408" class="icon-button twitter"><i class="fa fa-twitter"></i><span></span><span class="for-readers">TW</span></a>
+                      <a href="https://www.facebook.com/LatinDigital.io/?modal=admin_todo_tour" class="icon-button facebook"><i class="fa fa-facebook"></i><span></span><span class="for-readers">FB</span></a>
+                      <a href="https://www.linkedin.com/company/latindigital/" class="icon-button linkedin"><i class="fa fa-linkedin"></i><span></span><span class="for-readers">LI</span></a>
+                      <a href="https://plus.google.com/u/0/111877386748211344830" class="icon-button google-plus"><i class="fa fa-google-plus"></i><span></span><span class="for-readers">G+</span></a>
                   </div>
                 </div>
               </div>
@@ -474,7 +478,6 @@ body {
   </div>
   <!-- .container end -->
 </section> <!-- #workflow end -->
-
 
 
 <style>
@@ -909,7 +912,7 @@ padding-top:50px;
 			<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
 				<div class="heading heading-6 text--center mb-70">
 					<p class="heading--subtitle text-black"></p>
-					<h4 class="heading--title  text-grey" style="margin-bottom:104px; color:#333;">Contact Us</h4> 
+					<h4 class="heading--title  text-grey" style="margin-bottom:104px; color:#333;">Contact Us</h4>
 				</div>
 			</div><!-- .col-md-8 end -->
 			<div class="clearfix"></div>
@@ -942,15 +945,17 @@ padding-top:50px;
 
     <script>
       function initMap() {
-        var uluru = {lat: 30.267153, lng: -97.743061};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
+        setTimeout(function(){
+	        var uluru = {lat: 30.267153, lng: -97.743061};
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 10,
+	          center: uluru
+	        });
+	        var marker = new google.maps.Marker({
+	          position: uluru,
+	          map: map
+	        });
+		},10*1000);
       }
     </script>
     <script async defer
@@ -1035,6 +1040,12 @@ function googleTranslateElementInit() {
 
 <!-- <script type="text/javascript">!function(t,e){"use strict";var r=function(t){try{var r=e.head||e.getElementsByTagName("head")[0],a=e.createElement("script");a.setAttribute("type","text/javascript"),a.setAttribute("src",t),r.appendChild(a)}catch(t){}};t.CollectId = "5b1ebb6cf84ed8347b36c6a9",r("https://collectcdn.com/launcher.js")}(window,document);</script> -->
 
+<!-- Indemandly-->
+<script type="text/javascript">
+setTimeout(function() {
+	!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
+}, 10*1000);
+</script>
 
 <script>
 
@@ -1045,7 +1056,6 @@ function googleTranslateElementInit() {
   }
 
 </script>
-
 
 
 </html>
