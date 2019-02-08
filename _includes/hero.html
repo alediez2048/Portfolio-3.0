@@ -26,7 +26,7 @@
 
 
                       <div class="slide-action" style="text-align:center; padding-bottom:30px;">
-                        <a class="btn btn--secondary btn--white mr-30" href="{{ "/blog/" | relative_url }}">Learn More</a>
+                        <a class="btn btn--secondary btn--white mr-30" href="{{ "/blog/" | relative_url }}">Learn More<span class="for-readers"> in blog</span></a>
                         <a class="btn btn--white btn--bordered" id="scrollToBottom" href="#">Get Started</a>   </div>
                   </div>
               </div>
@@ -34,22 +34,10 @@
 </section>
 
 
-    <script type = "text/javascript">
-        $(function () {
-            $('#scrollToBottom').bind("click", function () {
-                $('html, body').animate({ scrollTop: $(document).height() }, 4200);
-                return false;
-            });
-            $('#scrollToTop').bind("click", function () {
-                $('html, body').animate({ scrollTop: 0 }, 5200);
-                return false;
-            });
-        });
-    </script>
 
 
 
-<!-- 
+<!--
 <div id="google_translate_element"></div><script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE}, 'google_translate_element');

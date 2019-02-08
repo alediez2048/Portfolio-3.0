@@ -32,7 +32,7 @@
 			<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
 				<div class="heading heading-6 text--center mb-70">
 					<p class="heading--subtitle text-black"></p>
-					<h4 class="heading--title  text-grey" style="margin-bottom:104px; color:#333;">Contact Us</h4> 
+					<h4 class="heading--title  text-grey" style="margin-bottom:104px; color:#333;">Contact Us</h4>
 				</div>
 			</div><!-- .col-md-8 end -->
 			<div class="clearfix"></div>
@@ -65,15 +65,17 @@
 
     <script>
       function initMap() {
-        var uluru = {lat: 30.267153, lng: -97.743061};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
+        setTimeout(function(){
+	        var uluru = {lat: 30.267153, lng: -97.743061};
+	        var map = new google.maps.Map(document.getElementById('map'), {
+	          zoom: 10,
+	          center: uluru
+	        });
+	        var marker = new google.maps.Marker({
+	          position: uluru,
+	          map: map
+	        });
+		},10*1000);
       }
     </script>
     <script async defer

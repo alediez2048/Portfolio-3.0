@@ -76,6 +76,12 @@
 @import "breadcrumb";
 @import "yt-video";
 
+/*$gray-text: #9b9b9b;*/ /* original value */
+$gray-text: #707070; /* google lighthouse - like value */
+/*$green-text: #1bb580;*/ /* original value */
+$green-text-orig: #1bb580; /* ok for bg under white text */
+$green-text: #086e4b; /* google lighthouse - like value */
+
 body,
 html {
     font-size: 13px
@@ -2169,7 +2175,7 @@ ul.dot-list li i {
 }
 
 .tabs .tab-content>.tab-pane p {
-    color: #9b9b9b;
+    color: $gray-text;
     font-size: 15px;
     font-weight: 400;
     line-height: 26px
@@ -5918,7 +5924,7 @@ a.next-section:hover {
 }
 
 .testimonial-panel .testimonial--meta p {
-    color: #1bb580;
+    color: #086e4b;
     font-size: 13px;
     font-weight: 400;
     line-height: 1;
@@ -6176,9 +6182,14 @@ a.next-section:hover {
     margin-right: 0
 }
 
-.portfolio-filter li a.active-filter,
 .portfolio-filter li a:hover {
-    color: #1bb580
+    color: $green-text;
+}
+.portfolio-filter li a.active-filter,
+.portfolio-filter li a.active-filter:hover {
+	background: $green-text;
+	color: white;
+	padding: 0.2em 0.5em;
 }
 
 .portfolio-item .portfolio--img {
@@ -8959,7 +8970,7 @@ a.link--styled {
 }
 
 .contact-form .form-control {
-    color: #9b9b9b;
+    color: $gray-text;
     font-family: Raleway, sans-serif;
     font-weight: 800;
     line-height: 49px;
@@ -9029,7 +9040,7 @@ a.link--styled {
 }
 
 .contact-panel p {
-    color: #9b9b9b;
+    color: $gray-text;
     font-family: Raleway;
     font-size: 14px;
     font-weight: 400;
@@ -9047,11 +9058,13 @@ a.link--styled {
 }
 
 .contact-panel .contact-action {
-    color: #1bb580
+    /*color: #1bb580;*/
+	color: black;
 }
 
 .contact-panel:hover .contact-action {
-    color: #282828
+	background: white;
+	color: $green-text-orig;
 }
 
 .contact-panel.contact-minimal {
@@ -9805,7 +9818,7 @@ a.link--styled {
 }
 
 .footer--links li a {
-    color: #7f7f7f;
+    color: #ccc;
     text-transform: capitalize;
     margin-right: 26px;
     position: relative
@@ -10214,7 +10227,7 @@ footer .widget-instagram .insta-hover i {
 }
 
 .process-panel .process-content p {
-    color: #9b9b9b;
+    color: $gray-text;
     font-size: 14px;
     font-weight: 400;
     line-height: 23px;

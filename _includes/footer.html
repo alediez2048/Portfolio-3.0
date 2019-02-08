@@ -34,6 +34,11 @@
   </div><!-- .footer-copyright end -->
 </footer>
  </div><!-- #wrapper end -->
+
+<!-- Fonts
+ 	============================================= -->
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif" rel="stylesheet" type="text/css">
+
 <!-- Footer Scripts
 ============================================= -->
 
@@ -75,14 +80,34 @@ function googleTranslateElementInit() {
 
 <!-- <script type="text/javascript">!function(t,e){"use strict";var r=function(t){try{var r=e.head||e.getElementsByTagName("head")[0],a=e.createElement("script");a.setAttribute("type","text/javascript"),a.setAttribute("src",t),r.appendChild(a)}catch(t){}};t.CollectId = "5b1ebb6cf84ed8347b36c6a9",r("https://collectcdn.com/launcher.js")}(window,document);</script> -->
 
+<!-- Indemandly-->
+<script type="text/javascript">
+setTimeout(function() {
+	!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
+}, 10*1000);
+</script>
+
+<script type = "text/javascript">
+	$(function () {
+		$('#scrollToBottom').bind("click", function () {
+			$('html, body').animate({ scrollTop: $(document).height() }, 4200);
+			return false;
+		});
+		$('#scrollToTop').bind("click", function () {
+			$('html, body').animate({ scrollTop: 0 }, 5200);
+			return false;
+		});
+	});
+</script>
 
 <script>
 
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
              .register('/sw.js')
-             .then(function() { console.log("Service Worker Registered"); });
+             .then(function() { console.log("Service Worker Registered"); })
+			 .catch(function() {
+				 console.log("'/sw.js' not found, or something like this");
+			 })
   }
-
 </script>
-
