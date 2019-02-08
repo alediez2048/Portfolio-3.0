@@ -231,6 +231,13 @@ hr#bread {
   width: 100%;
   height: 100%; }
 
+/*$gray-text: #9b9b9b;*/
+/* original value */
+/* google lighthouse - like value */
+/*$green-text: #1bb580;*/
+/* original value */
+/* ok for bg under white text */
+/* google lighthouse - like value */
 body,
 html {
   font-size: 13px; }
@@ -1876,7 +1883,7 @@ ul.dot-list li i {
   padding-top: 27px; }
 
 .tabs .tab-content > .tab-pane p {
-  color: #9b9b9b;
+  color: #707070;
   font-size: 15px;
   font-weight: 400;
   line-height: 26px; }
@@ -4843,7 +4850,7 @@ a.next-section:hover {
   text-transform: capitalize; }
 
 .testimonial-panel .testimonial--meta p {
-  color: #1bb580;
+  color: #086e4b;
   font-size: 13px;
   font-weight: 400;
   line-height: 1;
@@ -5043,9 +5050,14 @@ a.next-section:hover {
 .portfolio-filter li:last-child a {
   margin-right: 0; }
 
-.portfolio-filter li a.active-filter,
 .portfolio-filter li a:hover {
-  color: #1bb580; }
+  color: #086e4b; }
+
+.portfolio-filter li a.active-filter,
+.portfolio-filter li a.active-filter:hover {
+  background: #086e4b;
+  color: white;
+  padding: 0.2em 0.5em; }
 
 .portfolio-item .portfolio--img {
   position: relative; }
@@ -7308,7 +7320,7 @@ a.link--styled {
   padding-bottom: 4px; }
 
 .contact-form .form-control {
-  color: #9b9b9b;
+  color: #707070;
   font-family: Raleway, sans-serif;
   font-weight: 800;
   line-height: 49px;
@@ -7368,7 +7380,7 @@ a.link--styled {
   margin-bottom: 24px; }
 
 .contact-panel p {
-  color: #9b9b9b;
+  color: #707070;
   font-family: Raleway;
   font-size: 14px;
   font-weight: 400;
@@ -7384,10 +7396,12 @@ a.link--styled {
   font-size: 13px; }
 
 .contact-panel .contact-action {
-  color: #1bb580; }
+  /*color: #1bb580;*/
+  color: black; }
 
 .contact-panel:hover .contact-action {
-  color: #282828; }
+  background: white;
+  color: #1bb580; }
 
 .contact-panel.contact-minimal {
   box-shadow: none;
@@ -8008,7 +8022,7 @@ a.link--styled {
   padding-right: 0; }
 
 .footer--links li a {
-  color: #7f7f7f;
+  color: #ccc;
   text-transform: capitalize;
   margin-right: 26px;
   position: relative; }
@@ -8330,7 +8344,7 @@ footer .widget-instagram .insta-hover i {
   color: #1bb580; }
 
 .process-panel .process-content p {
-  color: #9b9b9b;
+  color: #707070;
   font-size: 14px;
   font-weight: 400;
   line-height: 23px;
