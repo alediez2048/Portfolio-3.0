@@ -670,7 +670,7 @@
  </div><!-- #wrapper end -->
 <!-- Fonts
  	============================================= -->
-<link href="http://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif" rel="stylesheet" type="text/css">
 
 <!-- Footer Scripts
 ============================================= -->
@@ -714,6 +714,19 @@ function googleTranslateElementInit() {
 setTimeout(function() {
 	!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
 }, 10*1000);
+</script>
+
+<script type = "text/javascript">
+	$(function () {
+		$('#scrollToBottom').bind("click", function () {
+			$('html, body').animate({ scrollTop: $(document).height() }, 4200);
+			return false;
+		});
+		$('#scrollToTop').bind("click", function () {
+			$('html, body').animate({ scrollTop: 0 }, 5200);
+			return false;
+		});
+	});
 </script>
 
 <script>
