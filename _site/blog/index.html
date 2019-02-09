@@ -12,17 +12,6 @@
       <meta name="keywords" content="Product Development Digital Marketing UX UI">
       <link href="/assets/images/favicon/favicon.png" rel="icon">
 
-      <!-- Stylesheets
-          ============================================= -->
-      <link href="/css/external.css" rel="stylesheet">
-      <link href="/css/bootstrap.min.css" rel="stylesheet">
-      <link href="/css/main.css" rel="stylesheet">
-      <link href="/css/patch-lighthouse.css" rel="stylesheet">
-
-      <!-- RS5.0 Main Stylesheet -->
-      <link rel="stylesheet" type="text/css" href="/revolution/css/settings.css">
-      <link rel="stylesheet" type="text/css" href="/revolution/css/layers.css">
-      <link rel="stylesheet" type="text/css" href="/revolution/css/navigation.css">
 
       <!-- G-Suite Metatag -->
       <meta name="google-site-verification" content="lGL0ars_GTR5x6kkKBeqdPhl6SPVgoPXt7yaTAWJIok" />
@@ -836,9 +825,49 @@
 </footer>
  </div><!-- #wrapper end -->
 
+<!-- Stylesheets
+============================================= -->
+<!--
+<link href="/css/external.css" rel="stylesheet" media="all">
+<link href="/css/bootstrap.min.css" rel="stylesheet" media="all">
+<link href="/css/main.css" rel="stylesheet" media="all">
+<link href="/css/patch-lighthouse.css" rel="stylesheet" media="all">
+-->
+
+<!-- RS5.0 Main Stylesheet -->
+<!--
+<link rel="stylesheet" type="text/css" href="/revolution/css/settings.css" media="all">
+<link rel="stylesheet" type="text/css" href="/revolution/css/layers.css" media="all">
+<link rel="stylesheet" type="text/css" href="/revolution/css/navigation.css" media="all">
+-->
 <!-- Fonts
  	============================================= -->
+<!--
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif" rel="stylesheet" type="text/css">
+-->
+<script>
+(function(){
+	// Eliminate render-blocking resources
+	// https://developers.google.com/web/tools/lighthouse/audits/blocking-resources
+	var files = [
+		"/css/external.css",
+		"/css/bootstrap.min.css",
+		"/css/main.css",
+		"/css/patch-lighthouse.css",
+		"/revolution/css/settings.css",
+		"/revolution/css/layers.css",
+		"/revolution/css/navigation.css",
+		"https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif"
+	];
+	files.forEach(function(href){
+		var node = document.createElement("link");
+		node.href = href;
+		node.rel = "stylesheet";
+		document.body.appendChild(node);
+	})
+})()
+</script>
+
 
 <!-- Footer Scripts
 ============================================= -->

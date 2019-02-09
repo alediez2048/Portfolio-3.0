@@ -35,9 +35,49 @@
 </footer>
  </div><!-- #wrapper end -->
 
+<!-- Stylesheets
+============================================= -->
+<!--
+<link href="{{ "css/external.css" | relative_url }}" rel="stylesheet" media="all">
+<link href="{{ "css/bootstrap.min.css" | relative_url }}" rel="stylesheet" media="all">
+<link href="{{ "css/main.css" | relative_url }}" rel="stylesheet" media="all">
+<link href="{{ "css/patch-lighthouse.css" | relative_url }}" rel="stylesheet" media="all">
+-->
+
+<!-- RS5.0 Main Stylesheet -->
+<!--
+<link rel="stylesheet" type="text/css" href="{{ "revolution/css/settings.css" | relative_url }}" media="all">
+<link rel="stylesheet" type="text/css" href="{{ "revolution/css/layers.css" | relative_url }}" media="all">
+<link rel="stylesheet" type="text/css" href="{{ "revolution/css/navigation.css" | relative_url }}" media="all">
+-->
 <!-- Fonts
  	============================================= -->
+<!--
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif" rel="stylesheet" type="text/css">
+-->
+<script>
+(function(){
+	// Eliminate render-blocking resources
+	// https://developers.google.com/web/tools/lighthouse/audits/blocking-resources
+	var files = [
+		"{{ "css/external.css" | relative_url }}",
+		"{{ "css/bootstrap.min.css" | relative_url }}",
+		"{{ "css/main.css" | relative_url }}",
+		"{{ "css/patch-lighthouse.css" | relative_url }}",
+		"{{ "revolution/css/settings.css" | relative_url }}",
+		"{{ "revolution/css/layers.css" | relative_url }}",
+		"{{ "revolution/css/navigation.css" | relative_url }}",
+		"https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif"
+	];
+	files.forEach(function(href){
+		var node = document.createElement("link");
+		node.href = href;
+		node.rel = "stylesheet";
+		document.body.appendChild(node);
+	})
+})()
+</script>
+
 
 <!-- Footer Scripts
 ============================================= -->
