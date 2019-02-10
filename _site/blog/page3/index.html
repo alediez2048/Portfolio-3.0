@@ -12,6 +12,17 @@
       <meta name="keywords" content="Product Development Digital Marketing UX UI">
       <link href="/assets/images/favicon/favicon.png" rel="icon">
 
+      <!-- Stylesheets
+          ============================================= -->
+      <link href="/css/external.css" rel="stylesheet">
+      <link href="/css/bootstrap.min.css" rel="stylesheet">
+      <link href="/css/main.css" rel="stylesheet">
+      <link href="/css/patch-lighthouse.css" rel="stylesheet">
+
+      <!-- RS5.0 Main Stylesheet -->
+      <link rel="stylesheet" type="text/css" href="/revolution/css/settings.css">
+      <link rel="stylesheet" type="text/css" href="/revolution/css/layers.css">
+      <link rel="stylesheet" type="text/css" href="/revolution/css/navigation.css">
 
       <!-- G-Suite Metatag -->
       <meta name="google-site-verification" content="lGL0ars_GTR5x6kkKBeqdPhl6SPVgoPXt7yaTAWJIok" />
@@ -27,7 +38,6 @@
 
         gtag('config', 'UA-118145960-1');
       </script>
-	  <!--link rel="preload" href="../fonts/fontawesome-webfont.woff2?v=4.6.3" as="style" /-->
 
     </head>
 
@@ -77,9 +87,13 @@
                 <!-- li end -->
 
                 <!-- Projects + Orgs -->
-<!--                 <li class="has-dropdown mega-dropdown">
-                  <a href="/projects.html">Projects + Orgs</a>
-                </li>       -->
+                <li class="has-dropdown mega-dropdown">
+                  <a href="/studycases.html">Study Cases</a>
+                </li>      
+
+                <li class="has-dropdown mega-dropdown">
+                  <a href="/contact-page.html">Contact</a>
+                </li>   
 
            </ul>
 
@@ -120,7 +134,7 @@
             <i class="fa fa-bars"></i>
             <span class="title">Side Navigation</span>
           </div>
-          <div class="module-content module-hamburger" style="display:none">
+          <div class="module-content module-hamburger">
             <div class="hamburger-panel bg-overlay bg-overlay-dark2">
   <div class="bg-section">
     <img src=/assets/images/background/hamburger.jpg alt="Background"/>
@@ -139,15 +153,17 @@
     </li>
     <li><a href="/social-media.html">Social Media</a>
     </li>
-    <li><a href="/projects.html">Projects + Orgs</a>
+    <li><a href="/studycases.html">Study Cases</a>
+    </li>
+    <li><a href="/contact-page.html">Contact</a>
     </li>
   </ul>
 <div class="clearfix"></div>
   <div class="social-share">
-    <a class="share-facebook" href="#"><i class="fa fa-facebook"></i><span class="for-readers">Share on Facebook</span></a>
-    <a class="share-twitter" href="#"><i class="fa fa-twitter"><span class="for-readers">Share on Twitter</span></i></a>
-    <a class="share-google-plus" href="#"><i class="fa fa-google-plus"></i><span class="for-readers">Share on G+</span></a>
-    <a class="share-linkedin" href="#"><i class="fa fa-linkedin"></i><span class="for-readers">Share on LinkedIn</span></a>
+    <a class="share-facebook" href=""><i class="fa fa-facebook"></i><span class="for-readers">Share on Facebook</span></a>
+    <a class="share-twitter" href=""><i class="fa fa-twitter"><span class="for-readers">Share on Twitter</span></i></a>
+    <a class="share-google-plus" href=""><i class="fa fa-github"></i><span class="for-readers">Share on G+</span></a>
+    <a class="share-linkedin" href=""><i class="fa fa-linkedin"></i><span class="for-readers">Share on LinkedIn</span></a>
   </div>
   <div class="clearfix"></div>
   <div class="copywright">
@@ -177,19 +193,11 @@
 <!-- Page Title #5  -->
 
 <section id="page-title" class="page-title bg-overlay bg-overlay-dark3">
-              <div class="element-with-video-bg jquery-background-video-wrapper" style="background-image: url(/assets/Working-Space/snapshots/Working-Space.jpg); height: 460px;"></div>
-	<video data-bgvideo="true" autoplay loop muted class="my-background-video jquery-background-video" poster="/assets/Working-Space/snapshots/Working-Space.jpg">
-	</video>
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function() {
-	setTimeout(function(){
-		document.querySelector('#page-title video').innerHTML = `
-			<source src="/assets/Working-Space/MP4/Working-Space.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-			<source src="/assets/Working-Space/WEBM/Working-Space.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-		`;
-	}, 5*1000);
-});
-</script>
+              <div class="element-with-video-bg jquery-background-video-wrapper" style="background-image: url(/assets/Working-Space/snapshots/Working-Space.jpg);"></div>
+              <video data-bgvideo="true" autoplay loop muted class="my-background-video jquery-background-video" poster="/assets/Working-Space/snapshots/Working-Space.jpg">
+                  <source src="/assets/Working-Space/MP4/Working-Space.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+                  <source src="/assets/Working-Space/WEBM/Working-Space.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+              </video>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
@@ -225,9 +233,9 @@ document.addEventListener("DOMContentLoaded", function() {
 					<div class="widget--content">
 						<form id="searchForm" class="form-search" action= method="get">
 							<div class="input-group">
-								<input id="search-query" type="text" class="form-control" placeholder="Type Your Search Words" aria-label="Search" >
+								<input id="search-query" type="text" class="form-control" placeholder="Type Your Search Words">
 								<span class="input-group-btn">
-									<button class="btn" type="submit"><i class="fa fa-search"></i><span class="for-readers">Search</span></button>
+									<button class="btn" type="submit"><i class="fa fa-search"></i></button>
 									<!-- <button class="btn" type="button"><i class="fa fa-search"></i></button> -->
 								</span>
 
@@ -302,7 +310,7 @@ document.addEventListener("DOMContentLoaded", function() {
 								</a>
 								</div>
 								<div class="entry-meta">
-									<a href="/modern/photography/2018/01/02/old-camera-copy.html">January 02, 2018<span class="for-readers"></span></a>
+									<a href="/modern/photography/2018/01/02/old-camera-copy.html">January 02, 2018</a>
 								</div>
 							</div>
 						</div>
@@ -317,7 +325,7 @@ document.addEventListener("DOMContentLoaded", function() {
 								</a>
 								</div>
 								<div class="entry-meta">
-									<a href="/modern/photography/2018/01/02/old-camera-2-copy.html">January 02, 2018<span class="for-readers"></span></a>
+									<a href="/modern/photography/2018/01/02/old-camera-2-copy.html">January 02, 2018</a>
 								</div>
 							</div>
 						</div>
@@ -371,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function() {
 								July 21, 2017
 							</div>
 							<div class="entry--more">
-								<a href="/modern/2017/07/21/state-of-2018-web-development-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span><span class="for-readers"> about State of 2018 web development</span></a>
+								<a href="/modern/2017/07/21/state-of-2018-web-development-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span></a>
 							</div>
 						</div>
 					</div>
@@ -385,7 +393,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			<div class="col-xs-12 col-sm-6 col-md-6">
 				<div class="blog-entry">
 					<div class="entry--img">
-						<a href="/modern/2017/05/19/how-to-become-a-top-freelancer-copy.html">
+						<a href="/modern/2017/05/18/how-to-become-a-top-freelancer-copy.html">
 							
 								<img src=/assets/images/blog/grid/1.jpg alt="entry image"/>
 							
@@ -403,17 +411,17 @@ document.addEventListener("DOMContentLoaded", function() {
 							
 						</div>
 						<div class="entry--title">
-							<h4><a href="/modern/2017/05/19/how-to-become-a-top-freelancer-copy.html">How to become a top freelancer</a></h4>
+							<h4><a href="/modern/2017/05/18/how-to-become-a-top-freelancer-copy.html">How to become a top freelancer</a></h4>
 						</div>
 						<div class="entry--bio">
 							At every tiled on ye defer do. No attention suspected oh difficult. Fond his say old meet cold find come...
 						</div>
 						<div class="entry--footer">
 							<div class="entry--date">
-								May 19, 2017
+								May 18, 2017
 							</div>
 							<div class="entry--more">
-								<a href="/modern/2017/05/19/how-to-become-a-top-freelancer-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span><span class="for-readers"> about How to become a top freelancer</span></a>
+								<a href="/modern/2017/05/18/how-to-become-a-top-freelancer-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span></a>
 							</div>
 						</div>
 					</div>
@@ -455,7 +463,7 @@ document.addEventListener("DOMContentLoaded", function() {
 								April 24, 2017
 							</div>
 							<div class="entry--more">
-								<a href="/travel/2017/04/24/four-ways-to-cheer-yourself-up-on-blue-monday-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span><span class="for-readers"> about Four ways to cheer yourself up on Blue Monday!</span></a>
+								<a href="/travel/2017/04/24/four-ways-to-cheer-yourself-up-on-blue-monday-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span></a>
 							</div>
 						</div>
 					</div>
@@ -497,7 +505,7 @@ document.addEventListener("DOMContentLoaded", function() {
 								February 15, 2017
 							</div>
 							<div class="entry--more">
-								<a href="/modern/2017/02/15/review-5-top-supercars-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span><span class="for-readers"> about Review of 5 top supercars</span></a>
+								<a href="/modern/2017/02/15/review-5-top-supercars-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span></a>
 							</div>
 						</div>
 					</div>
@@ -559,7 +567,7 @@ document.addEventListener("DOMContentLoaded", function() {
     <div id="cat-post-list" class="col-xs-12 col-sm-12 col-md-8 hide">
       <div class="widget-recent-posts glyphicon-record grid">
       
-        <div class="result entry element-item modern photography">
+        <div id="widget-cat" class="result entry element-item modern photography">
           <img src=/assets/images/blog/thumb/6.jpg alt="Old cameras can capture images better than nowdays camera!" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -573,7 +581,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item modern photography">
+        <div id="widget-cat" class="result entry element-item modern photography">
           <img src=/assets/images/blog/thumb/6.jpg alt="Old cameras can capture images better than nowdays camera!" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -587,7 +595,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item jekyll">
+        <div id="widget-cat" class="result entry element-item jekyll">
           <img src=/assets/images/blog/thumb/2.jpg alt="Multiple categories for Jekyll posts" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -601,7 +609,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item jekyll">
+        <div id="widget-cat" class="result entry element-item jekyll">
           <img src=/assets/images/blog/thumb/2.jpg alt="Multiple categories for Jekyll posts" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -615,7 +623,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item git technology">
+        <div id="widget-cat" class="result entry element-item git technology">
           <img src=/assets/images/blog/thumb/3.jpg alt="Dealing with non-fast-forward errors" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -629,7 +637,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item git technology">
+        <div id="widget-cat" class="result entry element-item git technology">
           <img src=/assets/images/blog/thumb/3.jpg alt="Dealing with non-fast-forward errors" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -643,13 +651,13 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item technology city">
+        <div id="widget-cat" class="result entry element-item technology city">
           <img src=/assets/images/blog/thumb/4.jpg alt="New subway line has the most advanced tech in the world" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
-              <a href="/technology/city/2017/08/19/new-subway-line-has-the-most-advanced-technology-in-the-world-copy.html" class="post-title">New subway line has the most advanced tech in the world</a>
+              <a href="/technology/city/2017/08/18/new-subway-line-has-the-most-advanced-technology-in-the-world-copy.html" class="post-title">New subway line has the most advanced tech in the world</a>
               <p class="p">
-                technology, city − August 19, 2017
+                technology, city − August 18, 2017
               </p>
             </div>
             <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone...</p>
@@ -657,13 +665,13 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item technology city">
+        <div id="widget-cat" class="result entry element-item technology city">
           <img src=/assets/images/blog/thumb/4.jpg alt="New subway line has the most advanced tech in the world" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
-              <a href="/technology/city/2017/08/19/new-subway-line-has-the-most-advanced-technology-in-the-world-2-copy.html" class="post-title">New subway line has the most advanced tech in the world</a>
+              <a href="/technology/city/2017/08/18/new-subway-line-has-the-most-advanced-technology-in-the-world-2-copy.html" class="post-title">New subway line has the most advanced tech in the world</a>
               <p class="p">
-                technology, city − August 19, 2017
+                technology, city − August 18, 2017
               </p>
             </div>
             <p>The European languages are members of the same family. Their separate existence is a myth. For science, music, sport, etc, Europe uses the same vocabulary. The languages only differ in their grammar, their pronunciation and their most common words. Everyone...</p>
@@ -671,7 +679,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item modern">
+        <div id="widget-cat" class="result entry element-item modern">
           <img src=/assets/images/blog/thumb/3.jpg alt="State of 2018 web development" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -685,13 +693,13 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item modern">
+        <div id="widget-cat" class="result entry element-item modern">
           <img src=/assets/images/blog/thumb/1.jpg alt="How to become a top freelancer" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
-              <a href="/modern/2017/05/19/how-to-become-a-top-freelancer-copy.html" class="post-title">How to become a top freelancer</a>
+              <a href="/modern/2017/05/18/how-to-become-a-top-freelancer-copy.html" class="post-title">How to become a top freelancer</a>
               <p class="p">
-                modern − May 19, 2017
+                modern − May 18, 2017
               </p>
             </div>
             <p>At every tiled on ye defer do. No attention suspected oh difficult. Fond his say old meet cold find come whom. The sir park sake bred. Wonder matter now can estate esteem assure fat roused. Am performed on existence as...</p>
@@ -699,7 +707,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item travel">
+        <div id="widget-cat" class="result entry element-item travel">
           <img src=/assets/images/blog/thumb/5.jpg alt="Four ways to cheer yourself up on Blue Monday!" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -713,7 +721,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item modern">
+        <div id="widget-cat" class="result entry element-item modern">
           <img src=/assets/images/blog/thumb/8.jpg alt="Review of 5 top supercars" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -727,7 +735,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item modern">
+        <div id="widget-cat" class="result entry element-item modern">
           <img src=/assets/images/blog/thumb/6.jpg alt="Principles of Engineering in modern era" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -741,7 +749,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item jekyll update">
+        <div id="widget-cat" class="result entry element-item jekyll update">
           <img src=/assets/images/blog/thumb/7.jpg alt="How to build a Quality Portfolio on a Budget" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -755,7 +763,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item jekyll update">
+        <div id="widget-cat" class="result entry element-item jekyll update">
           <img src=/assets/images/blog/thumb/7.jpg alt="How to build a Quality Portfolio on a Budget" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -769,7 +777,7 @@ document.addEventListener("DOMContentLoaded", function() {
           <hr>
         </div>
       
-        <div class="result entry element-item jekyll update">
+        <div id="widget-cat" class="result entry element-item jekyll update">
           <img src=/assets/images/blog/thumb/ alt="Welcome to Jekyll!" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -787,11 +795,9 @@ document.addEventListener("DOMContentLoaded", function() {
     </div>
 <!-- ========================= Post list End ========================= -->
 
-
 	</div><!-- .container end -->
 </section>
 <!-- #blog end -->
-
 
 
     </body>
@@ -832,49 +838,9 @@ document.addEventListener("DOMContentLoaded", function() {
 </footer>
  </div><!-- #wrapper end -->
 
-<!-- Stylesheets
-============================================= -->
-<!--
-<link href="/css/external.css" rel="stylesheet" media="all">
-<link href="/css/bootstrap.min.css" rel="stylesheet" media="all">
-<link href="/css/main.css" rel="stylesheet" media="all">
-<link href="/css/patch-lighthouse.css" rel="stylesheet" media="all">
--->
-
-<!-- RS5.0 Main Stylesheet -->
-<!--
-<link rel="stylesheet" type="text/css" href="/revolution/css/settings.css" media="all">
-<link rel="stylesheet" type="text/css" href="/revolution/css/layers.css" media="all">
-<link rel="stylesheet" type="text/css" href="/revolution/css/navigation.css" media="all">
--->
 <!-- Fonts
  	============================================= -->
-<!--
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif" rel="stylesheet" type="text/css">
--->
-<script>
-(function(){
-	// Eliminate render-blocking resources
-	// https://developers.google.com/web/tools/lighthouse/audits/blocking-resources
-	var files = [
-		"/css/external.css",
-		"/css/bootstrap.min.css",
-		"/css/main.css",
-		"/css/patch-lighthouse.css",
-		"/revolution/css/settings.css",
-		"/revolution/css/layers.css",
-		"/revolution/css/navigation.css",
-		"https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif"
-	];
-	files.forEach(function(href){
-		var node = document.createElement("link");
-		node.href = href;
-		node.rel = "stylesheet";
-		document.querySelector('head').appendChild(node);
-	})
-})()
-</script>
-
 
 <!-- Footer Scripts
 ============================================= -->
@@ -915,14 +881,12 @@ function googleTranslateElementInit() {
 
 <!-- Indemandly-->
 <script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function(event) {
-	setTimeout(function() {
-		!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
-	}, 10*1000);
-});
+setTimeout(function() {
+	!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
+}, 10*1000);
 </script>
 
-<script type="text/javascript">
+<script type = "text/javascript">
 	$(function () {
 		$('#scrollToBottom').bind("click", function () {
 			$('html, body').animate({ scrollTop: $(document).height() }, 4200);
@@ -935,45 +899,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	});
 </script>
 
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function(event) {
-	setTimeout(function(){
-		var x = retina();
-		if (x>1) {
-			document.querySelectorAll('img[data-img-retina]').forEach(img=>{
-				img.src = img.src.replace("x1.", "x"+x+".");
-			})
-		}
-		function retina() {
-			// http://imulus.github.io/retinajs/
-			// https://stackoverflow.com/questions/28374359/media-queries-for-2x-3x-and-4x-images
-			if (isRetina_3()) return 3;
-			if (isRetina_2()) return 2;
-			return 1;
-		}
-		function isRetina_2(){
-			if (window.devicePixelRatio > 1) return true;
-			var q = '(-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx)';
-	        if (window.matchMedia && window.matchMedia(q).matches) return true;
-		}
-		function isRetina_3(){
-			if (window.devicePixelRatio > 2) return true;
-			var q = '(-o-min-device-pixel-ratio: 9/4), (-webkit-min-device-pixel-ratio: 2.25), (min-device-pixel-ratio: 2.25), (min-resolution: 2.25dppx)';
-	        if (window.matchMedia && window.matchMedia(q).matches) return true;
-		}
-	},1*1000);
-});
-</script>
-<script type="text/javascript">
-document.addEventListener("DOMContentLoaded", function(event) {
-	Array.from(document.querySelectorAll('.module-content.module-hamburger'))
-	.forEach(function(v){
-		v.style.display = "";
-	});
-});
-</script>
+<script>
 
-<script type="text/javascript">
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
              .register('/sw.js')
