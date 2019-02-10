@@ -27,6 +27,7 @@
 
         gtag('config', 'UA-118145960-1');
       </script>
+	  <!--link rel="preload" href="../fonts/fontawesome-webfont.woff2?v=4.6.3" as="style" /-->
 
     </head>
 
@@ -119,7 +120,7 @@
             <i class="fa fa-bars"></i>
             <span class="title">Side Navigation</span>
           </div>
-          <div class="module-content module-hamburger">
+          <div class="module-content module-hamburger" style="display:none">
             <div class="hamburger-panel bg-overlay bg-overlay-dark2">
   <div class="bg-section">
     <img src=/assets/images/background/hamburger.jpg alt="Background"/>
@@ -337,7 +338,7 @@
 		var node = document.createElement("link");
 		node.href = href;
 		node.rel = "stylesheet";
-		document.body.appendChild(node);
+		document.querySelector('head').appendChild(node);
 	})
 })()
 </script>
@@ -382,12 +383,14 @@ function googleTranslateElementInit() {
 
 <!-- Indemandly-->
 <script type="text/javascript">
-setTimeout(function() {
-	!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
-}, 10*1000);
+document.addEventListener("DOMContentLoaded", function(event) {
+	setTimeout(function() {
+		!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
+	}, 10*1000);
+});
 </script>
 
-<script type = "text/javascript">
+<script type="text/javascript">
 	$(function () {
 		$('#scrollToBottom').bind("click", function () {
 			$('html, body').animate({ scrollTop: $(document).height() }, 4200);
@@ -400,8 +403,45 @@ setTimeout(function() {
 	});
 </script>
 
-<script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+	setTimeout(function(){
+		var x = retina();
+		if (x>1) {
+			document.querySelectorAll('img[data-img-retina]').forEach(img=>{
+				img.src = img.src.replace("x1.", "x"+x+".");
+			})
+		}
+		function retina() {
+			// http://imulus.github.io/retinajs/
+			// https://stackoverflow.com/questions/28374359/media-queries-for-2x-3x-and-4x-images
+			if (isRetina_3()) return 3;
+			if (isRetina_2()) return 2;
+			return 1;
+		}
+		function isRetina_2(){
+			if (window.devicePixelRatio > 1) return true;
+			var q = '(-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx)';
+	        if (window.matchMedia && window.matchMedia(q).matches) return true;
+		}
+		function isRetina_3(){
+			if (window.devicePixelRatio > 2) return true;
+			var q = '(-o-min-device-pixel-ratio: 9/4), (-webkit-min-device-pixel-ratio: 2.25), (min-device-pixel-ratio: 2.25), (min-resolution: 2.25dppx)';
+	        if (window.matchMedia && window.matchMedia(q).matches) return true;
+		}
+	},1*1000);
+});
+</script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+	Array.from(document.querySelectorAll('.module-content.module-hamburger'))
+	.forEach(function(v){
+		v.style.display = "";
+	});
+});
+</script>
 
+<script type="text/javascript">
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
              .register('/sw.js')

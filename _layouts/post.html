@@ -13,9 +13,9 @@ layout: default
                         <div class="widget--content">
                             <form id="searchForm" class="form-search">
                                 <div class="input-group">
-                                    <input id="search-query" type="text" class="form-control" placeholder="Type Your Search Words">
+                                    <input id="search-query" type="text" class="form-control" placeholder="Type Your Search Words" aria-label="Search">
                                     <span class="input-group-btn">
-                                      <button class="btn" type="submit"><i class="fa fa-search"></i></button>
+                                      <button class="btn" type="submit"><i class="fa fa-search"></i><span class="for-readers">Search</span></button>
                                     </span>
                                 </div>
                                 <!-- /input-group -->
@@ -40,7 +40,7 @@ layout: default
                                         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                                     </div>
                                     <div class="entry-meta">
-                                        <a href="{{ post.url | relative_url }}">{{ post.date | date: '%B %d, %Y' }}</a>
+                                        <a href="{{ post.url | relative_url }}">{{ post.date | date: '%B %d, %Y' }}<span class="for-readers"> {{ post.title }}</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -89,10 +89,10 @@ layout: default
                         </div>
                         <div class="entry--share">
                             <span class="share--title">share this article: </span>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u="><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u="><i class="fa fa-facebook"></i><span class="for-readers"> on Facebook</span></a>
+                            <a href="#"><i class="fa fa-twitter"></i><span class="for-readers"> on Twitter</span></a>
+                            <a href="#"><i class="fa fa-google-plus"></i><span class="for-readers"> on G+</span></a>
+                            <a href="#"><i class="fa fa-pinterest"></i><span class="for-readers"> on Pinterest</span></a>
                         </div>
                         <!-- .entry-share end -->
                     </div>

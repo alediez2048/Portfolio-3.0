@@ -27,6 +27,7 @@
 
         gtag('config', 'UA-118145960-1');
       </script>
+	  <!--link rel="preload" href="../fonts/fontawesome-webfont.woff2?v=4.6.3" as="style" /-->
 
     </head>
 
@@ -119,7 +120,7 @@
             <i class="fa fa-bars"></i>
             <span class="title">Side Navigation</span>
           </div>
-          <div class="module-content module-hamburger">
+          <div class="module-content module-hamburger" style="display:none">
             <div class="hamburger-panel bg-overlay bg-overlay-dark2">
   <div class="bg-section">
     <img src=/assets/images/background/hamburger.jpg alt="Background"/>
@@ -176,11 +177,19 @@
 <!-- Page Title #5  -->
 
 <section id="page-title" class="page-title bg-overlay bg-overlay-dark3">
-              <div class="element-with-video-bg jquery-background-video-wrapper" style="background-image: url(/assets/Working-Space/snapshots/Working-Space.jpg);"></div>
-              <video data-bgvideo="true" autoplay loop muted class="my-background-video jquery-background-video" poster="/assets/Working-Space/snapshots/Working-Space.jpg">
-                  <source src="/assets/Working-Space/MP4/Working-Space.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                  <source src="/assets/Working-Space/WEBM/Working-Space.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
-              </video>
+              <div class="element-with-video-bg jquery-background-video-wrapper" style="background-image: url(/assets/Working-Space/snapshots/Working-Space.jpg); height: 460px;"></div>
+	<video data-bgvideo="true" autoplay loop muted class="my-background-video jquery-background-video" poster="/assets/Working-Space/snapshots/Working-Space.jpg">
+	</video>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function() {
+	setTimeout(function(){
+		document.querySelector('#page-title video').innerHTML = `
+			<source src="/assets/Working-Space/MP4/Working-Space.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			<source src="/assets/Working-Space/WEBM/Working-Space.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+		`;
+	}, 5*1000);
+});
+</script>
 	<div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
@@ -216,9 +225,9 @@
 					<div class="widget--content">
 						<form id="searchForm" class="form-search" action= method="get">
 							<div class="input-group">
-								<input id="search-query" type="text" class="form-control" placeholder="Type Your Search Words">
+								<input id="search-query" type="text" class="form-control" placeholder="Type Your Search Words" aria-label="Search" >
 								<span class="input-group-btn">
-									<button class="btn" type="submit"><i class="fa fa-search"></i></button>
+									<button class="btn" type="submit"><i class="fa fa-search"></i><span class="for-readers">Search</span></button>
 									<!-- <button class="btn" type="button"><i class="fa fa-search"></i></button> -->
 								</span>
 
@@ -293,7 +302,7 @@
 								</a>
 								</div>
 								<div class="entry-meta">
-									<a href="/modern/photography/2018/01/02/old-camera-copy.html">January 02, 2018</a>
+									<a href="/modern/photography/2018/01/02/old-camera-copy.html">January 02, 2018<span class="for-readers"></span></a>
 								</div>
 							</div>
 						</div>
@@ -308,7 +317,7 @@
 								</a>
 								</div>
 								<div class="entry-meta">
-									<a href="/modern/photography/2018/01/02/old-camera-2-copy.html">January 02, 2018</a>
+									<a href="/modern/photography/2018/01/02/old-camera-2-copy.html">January 02, 2018<span class="for-readers"></span></a>
 								</div>
 							</div>
 						</div>
@@ -362,7 +371,7 @@
 								January 03, 2017
 							</div>
 							<div class="entry--more">
-								<a href="/modern/2017/01/03/principles-of-engineering-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span></a>
+								<a href="/modern/2017/01/03/principles-of-engineering-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span><span class="for-readers"> about Principles of Engineering in modern era</span></a>
 							</div>
 						</div>
 					</div>
@@ -409,7 +418,7 @@
 								July 21, 2016
 							</div>
 							<div class="entry--more">
-								<a href="/jekyll/update/2016/07/21/test-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span></a>
+								<a href="/jekyll/update/2016/07/21/test-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span><span class="for-readers"> about How to build a Quality Portfolio on a Budget</span></a>
 							</div>
 						</div>
 					</div>
@@ -456,7 +465,7 @@
 								July 21, 2016
 							</div>
 							<div class="entry--more">
-								<a href="/jekyll/update/2016/07/21/How-to-build-a-quality-portfolio-on-a-budget-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span></a>
+								<a href="/jekyll/update/2016/07/21/How-to-build-a-quality-portfolio-on-a-budget-copy.html"><i class="fa fa-long-arrow-right"></i><span>more</span><span class="for-readers"> about How to build a Quality Portfolio on a Budget</span></a>
 							</div>
 						</div>
 					</div>
@@ -501,7 +510,7 @@
 								April 20, 2014
 							</div>
 							<div class="entry--more">
-								<a href="/jekyll/update/2014/04/20/welcome-to-jekyll.html"><i class="fa fa-long-arrow-right"></i><span>more</span></a>
+								<a href="/jekyll/update/2014/04/20/welcome-to-jekyll.html"><i class="fa fa-long-arrow-right"></i><span>more</span><span class="for-readers"> about Welcome to Jekyll!</span></a>
 							</div>
 						</div>
 					</div>
@@ -561,7 +570,7 @@
     <div id="cat-post-list" class="col-xs-12 col-sm-12 col-md-8 hide">
       <div class="widget-recent-posts glyphicon-record grid">
       
-        <div id="widget-cat" class="result entry element-item modern photography">
+        <div class="result entry element-item modern photography">
           <img src=/assets/images/blog/thumb/6.jpg alt="Old cameras can capture images better than nowdays camera!" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -575,7 +584,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item modern photography">
+        <div class="result entry element-item modern photography">
           <img src=/assets/images/blog/thumb/6.jpg alt="Old cameras can capture images better than nowdays camera!" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -589,7 +598,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item jekyll">
+        <div class="result entry element-item jekyll">
           <img src=/assets/images/blog/thumb/2.jpg alt="Multiple categories for Jekyll posts" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -603,7 +612,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item jekyll">
+        <div class="result entry element-item jekyll">
           <img src=/assets/images/blog/thumb/2.jpg alt="Multiple categories for Jekyll posts" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -617,7 +626,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item git technology">
+        <div class="result entry element-item git technology">
           <img src=/assets/images/blog/thumb/3.jpg alt="Dealing with non-fast-forward errors" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -631,7 +640,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item git technology">
+        <div class="result entry element-item git technology">
           <img src=/assets/images/blog/thumb/3.jpg alt="Dealing with non-fast-forward errors" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -645,7 +654,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item technology city">
+        <div class="result entry element-item technology city">
           <img src=/assets/images/blog/thumb/4.jpg alt="New subway line has the most advanced tech in the world" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -659,7 +668,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item technology city">
+        <div class="result entry element-item technology city">
           <img src=/assets/images/blog/thumb/4.jpg alt="New subway line has the most advanced tech in the world" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -673,7 +682,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item modern">
+        <div class="result entry element-item modern">
           <img src=/assets/images/blog/thumb/3.jpg alt="State of 2018 web development" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -687,7 +696,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item modern">
+        <div class="result entry element-item modern">
           <img src=/assets/images/blog/thumb/1.jpg alt="How to become a top freelancer" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -701,7 +710,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item travel">
+        <div class="result entry element-item travel">
           <img src=/assets/images/blog/thumb/5.jpg alt="Four ways to cheer yourself up on Blue Monday!" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -715,7 +724,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item modern">
+        <div class="result entry element-item modern">
           <img src=/assets/images/blog/thumb/8.jpg alt="Review of 5 top supercars" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -729,7 +738,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item modern">
+        <div class="result entry element-item modern">
           <img src=/assets/images/blog/thumb/6.jpg alt="Principles of Engineering in modern era" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -743,7 +752,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item jekyll update">
+        <div class="result entry element-item jekyll update">
           <img src=/assets/images/blog/thumb/7.jpg alt="How to build a Quality Portfolio on a Budget" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -757,7 +766,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item jekyll update">
+        <div class="result entry element-item jekyll update">
           <img src=/assets/images/blog/thumb/7.jpg alt="How to build a Quality Portfolio on a Budget" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -771,7 +780,7 @@
           <hr>
         </div>
       
-        <div id="widget-cat" class="result entry element-item jekyll update">
+        <div class="result entry element-item jekyll update">
           <img src=/assets/images/blog/thumb/ alt="Welcome to Jekyll!" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
@@ -789,9 +798,11 @@
     </div>
 <!-- ========================= Post list End ========================= -->
 
+
 	</div><!-- .container end -->
 </section>
 <!-- #blog end -->
+
 
 
     </body>
@@ -870,7 +881,7 @@
 		var node = document.createElement("link");
 		node.href = href;
 		node.rel = "stylesheet";
-		document.body.appendChild(node);
+		document.querySelector('head').appendChild(node);
 	})
 })()
 </script>
@@ -915,12 +926,14 @@ function googleTranslateElementInit() {
 
 <!-- Indemandly-->
 <script type="text/javascript">
-setTimeout(function() {
-	!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
-}, 10*1000);
+document.addEventListener("DOMContentLoaded", function(event) {
+	setTimeout(function() {
+		!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
+	}, 10*1000);
+});
 </script>
 
-<script type = "text/javascript">
+<script type="text/javascript">
 	$(function () {
 		$('#scrollToBottom').bind("click", function () {
 			$('html, body').animate({ scrollTop: $(document).height() }, 4200);
@@ -933,8 +946,45 @@ setTimeout(function() {
 	});
 </script>
 
-<script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+	setTimeout(function(){
+		var x = retina();
+		if (x>1) {
+			document.querySelectorAll('img[data-img-retina]').forEach(img=>{
+				img.src = img.src.replace("x1.", "x"+x+".");
+			})
+		}
+		function retina() {
+			// http://imulus.github.io/retinajs/
+			// https://stackoverflow.com/questions/28374359/media-queries-for-2x-3x-and-4x-images
+			if (isRetina_3()) return 3;
+			if (isRetina_2()) return 2;
+			return 1;
+		}
+		function isRetina_2(){
+			if (window.devicePixelRatio > 1) return true;
+			var q = '(-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx)';
+	        if (window.matchMedia && window.matchMedia(q).matches) return true;
+		}
+		function isRetina_3(){
+			if (window.devicePixelRatio > 2) return true;
+			var q = '(-o-min-device-pixel-ratio: 9/4), (-webkit-min-device-pixel-ratio: 2.25), (min-device-pixel-ratio: 2.25), (min-resolution: 2.25dppx)';
+	        if (window.matchMedia && window.matchMedia(q).matches) return true;
+		}
+	},1*1000);
+});
+</script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+	Array.from(document.querySelectorAll('.module-content.module-hamburger'))
+	.forEach(function(v){
+		v.style.display = "";
+	});
+});
+</script>
 
+<script type="text/javascript">
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
              .register('/sw.js')

@@ -3,6 +3,7 @@ var browserSync = require('browser-sync');
 var compress    = require('compression');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
+var gzip        = require('gulp-gzip');
 var cp          = require('child_process');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
@@ -49,6 +50,10 @@ gulp.task('sass', function () {
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/css'))
+        .pipe(gzip({
+			threshold: 0,
+			gzipOptions: { level: 5 }
+		}))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('css'));
 });

@@ -2,7 +2,7 @@
     <div id="cat-post-list" class="col-xs-12 col-sm-12 col-md-8 hide">
       <div class="widget-recent-posts glyphicon-record grid">
       {% for post in site.posts %}
-        <div id="widget-cat" class="result entry element-item {% for category in post.categories %}{{category}}{% unless forloop.last %}{{' '}}{% endunless %}{% endfor %}">
+        <div class="result entry element-item {% for category in post.categories %}{{category}}{% unless forloop.last %}{{' '}}{% endunless %}{% endfor %}">
           <img src={{ "assets/images/blog/thumb/" | relative_url }}{{post.thumb}} alt="{{ post.title }}" class="result-img">
           <div class="result entry-desc">
             <div class="entry-title">
