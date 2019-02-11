@@ -29,19 +29,19 @@
       </script>
 	  <!--link rel="preload" href="../fonts/fontawesome-webfont.woff2?v=4.6.3" as="style" /-->
 	  <script type="text/javascript">
-		  function deferImages(node) {
+		  function deferImages(node, alwaysRecheck) {
 		  		document.addEventListener("DOMContentLoaded", function(event) {
 		  			var loaded = false;
-		  			var node = document.getElementById('portfolio');
 		  			check();
 		  			function load() {
 		  				loaded = true;
 		  				Array.from(node.querySelectorAll('img[data-src]')).forEach(node=>{
 		  					node.src = node.getAttribute("data-src");
+							node.removeAttribute("data-src");
 		  				})
 		  			}
 		  			function check() {
-		  				if (loaded) return;
+		  				if (loaded && !alwaysRecheck) return;
 		  				if (checkViewport()) {
 		  					load();
 		  				}

@@ -29,19 +29,19 @@
       </script>
 	  <!--link rel="preload" href="../fonts/fontawesome-webfont.woff2?v=4.6.3" as="style" /-->
 	  <script type="text/javascript">
-		  function deferImages(node) {
+		  function deferImages(node, alwaysRecheck) {
 		  		document.addEventListener("DOMContentLoaded", function(event) {
 		  			var loaded = false;
-		  			var node = document.getElementById('portfolio');
 		  			check();
 		  			function load() {
 		  				loaded = true;
 		  				Array.from(node.querySelectorAll('img[data-src]')).forEach(node=>{
 		  					node.src = node.getAttribute("data-src");
+							node.removeAttribute("data-src");
 		  				})
 		  			}
 		  			function check() {
-		  				if (loaded) return;
+		  				if (loaded && !alwaysRecheck) return;
 		  				if (checkViewport()) {
 		  					load();
 		  				}
@@ -888,7 +888,7 @@ padding-top:50px;
 		</div><!-- .row end -->
 	</div><!-- .container-fluid end -->
 	<script type="text/javascript">
-		deferImages(document.getElementById('portfolio'));
+		deferImages(document.getElementById('portfolio'), false);
 	</script>
 </section><!-- #portfolio end -->
 
@@ -1036,7 +1036,7 @@ padding-top:50px;
 
 						<div class="testimonial--meta">
 							<div class="testimonial--meta-img">
-								<img src=/assets/images/testimonial/paul.png alt="Testimonial Author">
+								<img src=/assets/images/testimonial/defer.png data-src=/assets/images/testimonial/paul-x1.jpg alt="Testimonial Author">
 							</div>
 							<h4>Paul Boomgaart</h4>
 							<p>CTO at Springbox Digital Partners</p>
@@ -1052,7 +1052,7 @@ padding-top:50px;
 
 						<div class="testimonial--meta">
 							<div class="testimonial--meta-img">
-								<img src=/assets/images/testimonial/cam.png alt="Testimonial Author">
+								<img src=/assets/images/testimonial/defer.png data-src=/assets/images/testimonial/cam-x1.jpg alt="Testimonial Author">
 							</div>
 							<h4>Cam Houser</h4>
 							<p>CEO 3 Day Startup </p>
@@ -1068,7 +1068,7 @@ padding-top:50px;
 
 						<div class="testimonial--meta">
 							<div class="testimonial--meta-img">
-								<img src=/assets/images/testimonial/jd.png alt="Testimonial Author">
+								<img src=/assets/images/testimonial/defer.png data-src=/assets/images/testimonial/jd-x1.jpg alt="Testimonial Author">
 							</div>
 							<h4>JD Weinstein</h4>
 							<p>Venture Labs Lead at </p>
@@ -1084,7 +1084,7 @@ padding-top:50px;
 						</div><!-- .testimonial-body end -->
 						<div class="testimonial--meta">
 							<div class="testimonial--meta-img">
-								<img src=/assets/images/testimonial/gerardo.png alt="Testimonial Author">
+								<img src=/assets/images/testimonial/defer.png data-src=/assets/images/testimonial/gerardo-x1.jpg alt="Testimonial Author">
 							</div>
 							<h4>Gerardo Casanova</h4>
 							<p>General Manager ESPN Latin America</p>
@@ -1095,6 +1095,12 @@ padding-top:50px;
 		</div><!-- .row end -->
 	</div><!-- .container end -->
 </section><!-- #testimonial2 end -->
+
+
+<script type="text/javascript">
+	deferImages(document.getElementById('testimonia2'), true);
+</script>
+
 
 
     <style>
