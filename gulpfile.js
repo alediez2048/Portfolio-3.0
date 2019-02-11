@@ -3,6 +3,7 @@ var browserSync = require('browser-sync');
 var compress    = require('compression');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
+let cleanCSS    = require('gulp-clean-css');
 var gzip        = require('gulp-gzip');
 var cp          = require('child_process');
 
@@ -49,11 +50,12 @@ gulp.task('sass', function () {
             onError: browserSync.notify
         }))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+		.pipe(cleanCSS({compatibility: 'ie7'}))
         .pipe(gulp.dest('_site/css'))
-        .pipe(gzip({
-			threshold: 0,
-			gzipOptions: { level: 5 }
-		}))
+        // .pipe(gzip({
+		// 	threshold: 0,
+		// 	gzipOptions: { level: 5 }
+		// }))
         .pipe(browserSync.reload({stream:true}))
         .pipe(gulp.dest('css'));
 });

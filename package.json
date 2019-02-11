@@ -13,6 +13,7 @@
     "compression": "^1.7.3",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "1.0.0",
+    "gulp-clean-css": "^4.0.0",
     "gulp-gzip": "^1.4.2",
     "gulp-sass": "3.0.0"
   },
