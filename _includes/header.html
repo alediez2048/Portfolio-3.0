@@ -12,7 +12,6 @@
         </button>
         <a class="logo" href="{{ "/index.html" | relative_url }}">
           <img class="logo-light" src={{ "assets/images/logo/digitalLogo_light.png" | relative_url }} alt="League Logo">
-          <img class="logo-dark" src={{ "assets/images/logo/digitalLogo_dark.png" | relative_url }} alt="League Logo">
         </a>
       </div>
 
@@ -44,11 +43,11 @@
                 <!-- Projects + Orgs -->
                 <li class="has-dropdown mega-dropdown">
                   <a href="{{ "/studycases.html" | relative_url }}">Study Cases</a>
-                </li>      
+                </li>
 
                 <li class="has-dropdown mega-dropdown">
                   <a href="{{ "/contact-page.html" | relative_url }}">Contact</a>
-                </li>   
+                </li>
 
            </ul>
 
@@ -89,11 +88,8 @@
             <i class="fa fa-bars"></i>
             <span class="title">Side Navigation</span>
           </div>
-          <div class="module-content module-hamburger">
-            <div class="hamburger-panel bg-overlay bg-overlay-dark2">
-  <div class="bg-section">
-    <img src={{ "assets/images/background/hamburger.jpg" | relative_url}} alt="Background"/>
-  </div>
+          <div class="module-content module-hamburger bg-overlay bg-overlay-dark2" style="display:none">
+            <div class="hamburger-panel ">
 <div>
   <a class="logo" href="{{ "/index.html" | relative_url }}">
     <img src={{ "assets/images/logo/digitalLogo_light.png" | relative_url}} alt="League Logo">
