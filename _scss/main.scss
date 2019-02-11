@@ -84,7 +84,8 @@ $green-text: #086e4b; /* google lighthouse - like value */
 
 body,
 html {
-    font-size: 13px
+    font-size: 13px;
+	background: white;
 }
 
 a:active,
@@ -1415,6 +1416,9 @@ blockquot {
 .bg-orange-3 {
     background-color: #F89406!important;
     color: #fff
+}
+.bg-green {
+	background-color: $green-text-orig;
 }
 
 .breadcrumb,
@@ -5168,9 +5172,16 @@ ul.dropdown-menu>li.has-dropdown>a:before {
     }
 }
 
+.module-hamburger {
+}
+.module-hamburger.bg-overlay-dark2:before {
+	background: transparent url(../assets/images/background/hamburger.jpg) center center no-repeat;
+	background-size: cover;
+	opacity: 1; /* via view on current site */
+}
 .hamburger-panel {
     padding: 50px 30px;
-    text-align: center
+    text-align: center;
 }
 
 .hamburger-panel .list-links {
