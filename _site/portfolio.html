@@ -28,6 +28,38 @@
         gtag('config', 'UA-118145960-1');
       </script>
 	  <!--link rel="preload" href="../fonts/fontawesome-webfont.woff2?v=4.6.3" as="style" /-->
+	  <script type="text/javascript">
+		  function deferImages(node) {
+		  		document.addEventListener("DOMContentLoaded", function(event) {
+		  			var loaded = false;
+		  			var node = document.getElementById('portfolio');
+		  			check();
+		  			function load() {
+		  				loaded = true;
+		  				Array.from(node.querySelectorAll('img[data-src]')).forEach(node=>{
+		  					node.src = node.getAttribute("data-src");
+		  				})
+		  			}
+		  			function check() {
+		  				if (loaded) return;
+		  				if (checkViewport()) {
+		  					load();
+		  				}
+		  				setTimeout(check, 50);
+		  			}
+		  			function checkViewport() {
+		  				var topOfViewport = Math.floor(node.getBoundingClientRect().top);
+		  				var viewportHeight = Math.floor(Math.min(
+		  					document.body.clientHeight || 0,
+		  					document.documentElement.clientHeight || 0
+		  				));
+		  				if (viewportHeight<500) viewportHeight = 500;
+		  				return topOfViewport < viewportHeight;
+		  			}
+		  		});
+		  }
+
+	  </script>
 
     </head>
 
