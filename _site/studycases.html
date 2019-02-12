@@ -12,21 +12,14 @@
       <meta name="keywords" content="Product Development Digital Marketing UX UI">
       <link href="/assets/images/favicon/favicon.png" rel="icon">
 
-      <!-- Stylesheets
-          ============================================= -->
-      <link href="/css/external.css" rel="stylesheet">
-      <link href="/css/bootstrap.min.css" rel="stylesheet">
-      <link href="/css/main.css" rel="stylesheet">
-      <link href="/css/patch-lighthouse.css" rel="stylesheet">
-
-      <!-- RS5.0 Main Stylesheet -->
-      <link rel="stylesheet" type="text/css" href="/revolution/css/settings.css">
-      <link rel="stylesheet" type="text/css" href="/revolution/css/layers.css">
-      <link rel="stylesheet" type="text/css" href="/revolution/css/navigation.css">
 
       <!-- G-Suite Metatag -->
       <meta name="google-site-verification" content="lGL0ars_GTR5x6kkKBeqdPhl6SPVgoPXt7yaTAWJIok" />
       <!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
+
+	  <!-- https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect -->
+	  <link rel="preconnect" href="https://translate.googleapis.com">
+	  <link rel="dns-prefetch" href="https://translate.googleapis.com">
 
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,6 +31,39 @@
 
         gtag('config', 'UA-118145960-1');
       </script>
+	  <!--link rel="preload" href="../fonts/fontawesome-webfont.woff2?v=4.6.3" as="style" /-->
+	  <script type="text/javascript">
+		  function deferImages(node, alwaysRecheck) {
+		  		document.addEventListener("DOMContentLoaded", function(event) {
+		  			var loaded = false;
+		  			check();
+		  			function load() {
+		  				loaded = true;
+		  				Array.from(node.querySelectorAll('img[data-src]')).forEach(node=>{
+		  					node.src = node.getAttribute("data-src");
+							node.removeAttribute("data-src");
+		  				})
+		  			}
+		  			function check() {
+		  				if (loaded && !alwaysRecheck) return;
+		  				if (checkViewport()) {
+		  					load();
+		  				}
+		  				setTimeout(check, 50);
+		  			}
+		  			function checkViewport() {
+		  				var topOfViewport = Math.floor(node.getBoundingClientRect().top);
+		  				var viewportHeight = Math.floor(Math.min(
+		  					document.body.clientHeight || 0,
+		  					document.documentElement.clientHeight || 0
+		  				));
+		  				if (viewportHeight<500) viewportHeight = 500;
+		  				return topOfViewport < viewportHeight;
+		  			}
+		  		});
+		  }
+
+	  </script>
 
     </head>
 
@@ -57,7 +83,6 @@
         </button>
         <a class="logo" href="/index.html">
           <img class="logo-light" src=/assets/images/logo/digitalLogo_light.png alt="League Logo">
-          <img class="logo-dark" src=/assets/images/logo/digitalLogo_dark.png alt="League Logo">
         </a>
       </div>
 
@@ -89,11 +114,11 @@
                 <!-- Projects + Orgs -->
                 <li class="has-dropdown mega-dropdown">
                   <a href="/studycases.html">Study Cases</a>
-                </li>      
+                </li>
 
                 <li class="has-dropdown mega-dropdown">
                   <a href="/contact-page.html">Contact</a>
-                </li>   
+                </li>
 
            </ul>
 
@@ -134,11 +159,8 @@
             <i class="fa fa-bars"></i>
             <span class="title">Side Navigation</span>
           </div>
-          <div class="module-content module-hamburger">
-            <div class="hamburger-panel bg-overlay bg-overlay-dark2">
-  <div class="bg-section">
-    <img src=/assets/images/background/hamburger.jpg alt="Background"/>
-  </div>
+          <div class="module-content module-hamburger bg-overlay bg-overlay-dark2" style="display:none">
+            <div class="hamburger-panel ">
 <div>
   <a class="logo" href="/index.html">
     <img src=/assets/images/logo/digitalLogo_light.png alt="League Logo">
@@ -472,9 +494,49 @@
 </footer>
  </div><!-- #wrapper end -->
 
+<!-- Stylesheets
+============================================= -->
+<!--
+<link href="/css/external.css" rel="stylesheet" media="all">
+<link href="/css/bootstrap.min.css" rel="stylesheet" media="all">
+<link href="/css/main.css" rel="stylesheet" media="all">
+<link href="/css/patch-lighthouse.css" rel="stylesheet" media="all">
+-->
+
+<!-- RS5.0 Main Stylesheet -->
+<!--
+<link rel="stylesheet" type="text/css" href="/revolution/css/settings.css" media="all">
+<link rel="stylesheet" type="text/css" href="/revolution/css/layers.css" media="all">
+<link rel="stylesheet" type="text/css" href="/revolution/css/navigation.css" media="all">
+-->
 <!-- Fonts
  	============================================= -->
+<!--
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif" rel="stylesheet" type="text/css">
+-->
+<script>
+(function(){
+	// Eliminate render-blocking resources
+	// https://developers.google.com/web/tools/lighthouse/audits/blocking-resources
+	var files = [
+		"/css/external.css",
+		"/css/bootstrap.min.css",
+		"/css/main.css",
+		"/css/patch-lighthouse.css",
+		"/revolution/css/settings.css",
+		"/revolution/css/layers.css",
+		"/revolution/css/navigation.css",
+		"https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif"
+	];
+	files.forEach(function(href){
+		var node = document.createElement("link");
+		node.href = href;
+		node.rel = "stylesheet";
+		document.querySelector('head').appendChild(node);
+	})
+})()
+</script>
+
 
 <!-- Footer Scripts
 ============================================= -->
@@ -515,12 +577,14 @@ function googleTranslateElementInit() {
 
 <!-- Indemandly-->
 <script type="text/javascript">
-setTimeout(function() {
-	!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
-}, 10*1000);
+document.addEventListener("DOMContentLoaded", function(event) {
+	setTimeout(function() {
+		!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
+	}, 10*1000);
+});
 </script>
 
-<script type = "text/javascript">
+<script type="text/javascript">
 	$(function () {
 		$('#scrollToBottom').bind("click", function () {
 			$('html, body').animate({ scrollTop: $(document).height() }, 4200);
@@ -533,8 +597,45 @@ setTimeout(function() {
 	});
 </script>
 
-<script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+	setTimeout(function(){
+		var x = retina();
+		if (x>1) {
+			document.querySelectorAll('img[data-img-retina]').forEach(img=>{
+				img.src = img.src.replace("x1.", "x"+x+".");
+			})
+		}
+		function retina() {
+			// http://imulus.github.io/retinajs/
+			// https://stackoverflow.com/questions/28374359/media-queries-for-2x-3x-and-4x-images
+			if (isRetina_3()) return 3;
+			if (isRetina_2()) return 2;
+			return 1;
+		}
+		function isRetina_2(){
+			if (window.devicePixelRatio > 1) return true;
+			var q = '(-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx)';
+	        if (window.matchMedia && window.matchMedia(q).matches) return true;
+		}
+		function isRetina_3(){
+			if (window.devicePixelRatio > 2) return true;
+			var q = '(-o-min-device-pixel-ratio: 9/4), (-webkit-min-device-pixel-ratio: 2.25), (min-device-pixel-ratio: 2.25), (min-resolution: 2.25dppx)';
+	        if (window.matchMedia && window.matchMedia(q).matches) return true;
+		}
+	},1*1000);
+});
+</script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+	Array.from(document.querySelectorAll('.module-content.module-hamburger'))
+	.forEach(function(v){
+		v.style.display = "";
+	});
+});
+</script>
 
+<script type="text/javascript">
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
              .register('/sw.js')

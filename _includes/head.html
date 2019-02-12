@@ -10,21 +10,14 @@
       <meta name="keywords" content="Product Development Digital Marketing UX UI">
       <link href="{{ "assets/images/favicon/favicon.png" | relative_url }}" rel="icon">
 
-      <!-- Stylesheets
-          ============================================= -->
-      <link href="{{ "css/external.css" | relative_url }}" rel="stylesheet">
-      <link href="{{ "css/bootstrap.min.css" | relative_url }}" rel="stylesheet">
-      <link href="{{ "css/main.css" | relative_url }}" rel="stylesheet">
-      <link href="{{ "css/patch-lighthouse.css" | relative_url }}" rel="stylesheet">
-
-      <!-- RS5.0 Main Stylesheet -->
-      <link rel="stylesheet" type="text/css" href="{{ "revolution/css/settings.css" | relative_url }}">
-      <link rel="stylesheet" type="text/css" href="{{ "revolution/css/layers.css" | relative_url }}">
-      <link rel="stylesheet" type="text/css" href="{{ "revolution/css/navigation.css" | relative_url }}">
 
       <!-- G-Suite Metatag -->
       <meta name="google-site-verification" content="lGL0ars_GTR5x6kkKBeqdPhl6SPVgoPXt7yaTAWJIok" />
       <!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
+
+	  <!-- https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect -->
+	  <link rel="preconnect" href="https://translate.googleapis.com">
+	  <link rel="dns-prefetch" href="https://translate.googleapis.com">
 
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -36,5 +29,38 @@
 
         gtag('config', 'UA-118145960-1');
       </script>
+	  <!--link rel="preload" href="../fonts/fontawesome-webfont.woff2?v=4.6.3" as="style" /-->
+	  <script type="text/javascript">
+		  function deferImages(node, alwaysRecheck) {
+		  		document.addEventListener("DOMContentLoaded", function(event) {
+		  			var loaded = false;
+		  			check();
+		  			function load() {
+		  				loaded = true;
+		  				Array.from(node.querySelectorAll('img[data-src]')).forEach(node=>{
+		  					node.src = node.getAttribute("data-src");
+							node.removeAttribute("data-src");
+		  				})
+		  			}
+		  			function check() {
+		  				if (loaded && !alwaysRecheck) return;
+		  				if (checkViewport()) {
+		  					load();
+		  				}
+		  				setTimeout(check, 50);
+		  			}
+		  			function checkViewport() {
+		  				var topOfViewport = Math.floor(node.getBoundingClientRect().top);
+		  				var viewportHeight = Math.floor(Math.min(
+		  					document.body.clientHeight || 0,
+		  					document.documentElement.clientHeight || 0
+		  				));
+		  				if (viewportHeight<500) viewportHeight = 500;
+		  				return topOfViewport < viewportHeight;
+		  			}
+		  		});
+		  }
+
+	  </script>
 
     </head>

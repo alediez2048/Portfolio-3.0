@@ -12,21 +12,14 @@
       <meta name="keywords" content="Product Development Digital Marketing UX UI">
       <link href="/assets/images/favicon/favicon.png" rel="icon">
 
-      <!-- Stylesheets
-          ============================================= -->
-      <link href="/css/external.css" rel="stylesheet">
-      <link href="/css/bootstrap.min.css" rel="stylesheet">
-      <link href="/css/main.css" rel="stylesheet">
-      <link href="/css/patch-lighthouse.css" rel="stylesheet">
-
-      <!-- RS5.0 Main Stylesheet -->
-      <link rel="stylesheet" type="text/css" href="/revolution/css/settings.css">
-      <link rel="stylesheet" type="text/css" href="/revolution/css/layers.css">
-      <link rel="stylesheet" type="text/css" href="/revolution/css/navigation.css">
 
       <!-- G-Suite Metatag -->
       <meta name="google-site-verification" content="lGL0ars_GTR5x6kkKBeqdPhl6SPVgoPXt7yaTAWJIok" />
       <!--script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script-->
+
+	  <!-- https://developers.google.com/web/fundamentals/performance/resource-prioritization#preconnect -->
+	  <link rel="preconnect" href="https://translate.googleapis.com">
+	  <link rel="dns-prefetch" href="https://translate.googleapis.com">
 
 
       <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -38,6 +31,39 @@
 
         gtag('config', 'UA-118145960-1');
       </script>
+	  <!--link rel="preload" href="../fonts/fontawesome-webfont.woff2?v=4.6.3" as="style" /-->
+	  <script type="text/javascript">
+		  function deferImages(node, alwaysRecheck) {
+		  		document.addEventListener("DOMContentLoaded", function(event) {
+		  			var loaded = false;
+		  			check();
+		  			function load() {
+		  				loaded = true;
+		  				Array.from(node.querySelectorAll('img[data-src]')).forEach(node=>{
+		  					node.src = node.getAttribute("data-src");
+							node.removeAttribute("data-src");
+		  				})
+		  			}
+		  			function check() {
+		  				if (loaded && !alwaysRecheck) return;
+		  				if (checkViewport()) {
+		  					load();
+		  				}
+		  				setTimeout(check, 50);
+		  			}
+		  			function checkViewport() {
+		  				var topOfViewport = Math.floor(node.getBoundingClientRect().top);
+		  				var viewportHeight = Math.floor(Math.min(
+		  					document.body.clientHeight || 0,
+		  					document.documentElement.clientHeight || 0
+		  				));
+		  				if (viewportHeight<500) viewportHeight = 500;
+		  				return topOfViewport < viewportHeight;
+		  			}
+		  		});
+		  }
+
+	  </script>
 
     </head>
 
@@ -57,7 +83,6 @@
         </button>
         <a class="logo" href="/index.html">
           <img class="logo-light" src=/assets/images/logo/digitalLogo_light.png alt="League Logo">
-          <img class="logo-dark" src=/assets/images/logo/digitalLogo_dark.png alt="League Logo">
         </a>
       </div>
 
@@ -89,11 +114,11 @@
                 <!-- Projects + Orgs -->
                 <li class="has-dropdown mega-dropdown">
                   <a href="/studycases.html">Study Cases</a>
-                </li>      
+                </li>
 
                 <li class="has-dropdown mega-dropdown">
                   <a href="/contact-page.html">Contact</a>
-                </li>   
+                </li>
 
            </ul>
 
@@ -134,11 +159,8 @@
             <i class="fa fa-bars"></i>
             <span class="title">Side Navigation</span>
           </div>
-          <div class="module-content module-hamburger">
-            <div class="hamburger-panel bg-overlay bg-overlay-dark2">
-  <div class="bg-section">
-    <img src=/assets/images/background/hamburger.jpg alt="Background"/>
-  </div>
+          <div class="module-content module-hamburger bg-overlay bg-overlay-dark2" style="display:none">
+            <div class="hamburger-panel ">
 <div>
   <a class="logo" href="/index.html">
     <img src=/assets/images/logo/digitalLogo_light.png alt="League Logo">
@@ -196,9 +218,17 @@
 <section id="page-title" class="page-title bg-overlay bg-overlay-dark3">
               <div class="element-with-video-bg jquery-background-video-wrapper" style="background-image: url(/assets/Working-Space/snapshots/Working-Space.jpg);"></div>
               <video data-bgvideo="true" autoplay loop muted class="my-background-video jquery-background-video" poster="/assets/Working-Space/snapshots/Working-Space.jpg">
-                  <source src="/assets/Working-Space/MP4/Working-Space.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
-                  <source src="/assets/Working-Space/WEBM/Working-Space.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
               </video>
+			  <script type="text/javascript">
+			  document.addEventListener("DOMContentLoaded", function() {
+			  	setTimeout(function(){
+			  		document.querySelector('#page-title video').innerHTML = `
+			  			<source src="/assets/Working-Space/MP4/Working-Space.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			  			<source src="/assets/Working-Space/WEBM/Working-Space.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
+			  		`;
+			  	}, 5*1000);
+			  });
+			  </script>
 <div class="container">
 		<div class="row">
 			<div class="col-xs-12 col-sm-12 col-md-6 col-md-offset-3">
@@ -530,20 +560,20 @@
                             <div class="pos-vertical-center">
                                 <div class="portfolio--zoom">
                                     <a class="img-gallery-item" href="/assets/images/portfolio/grid/3col/more/13.jpg" title="View of my screen"></a>
-                                
+
                                 </div>
                                 <div class="portfolio--title">
                                     <h4><a href="#">View of my screen</a></h4>
                                 </div>
                                 <div class="portfolio--cat"><a href="#">Campaign</a>,<a href="#">Full Stack</a></div>
-                              
+
                             </div>
                         </div>
-                      
+
                     </div>
-                  
+
                 </div>
-              
+
             </div> -->
             <!-- . portfolio-item end -->
             
@@ -557,20 +587,20 @@
                             <div class="pos-vertical-center">
                                 <div class="portfolio--zoom">
                                     <a class="img-gallery-item" href="/assets/images/portfolio/grid/3col/more/14.jpg" title="Spa treatment in your home"></a>
-                                
+
                                 </div>
                                 <div class="portfolio--title">
                                     <h4><a href="#">Spa treatment in your home</a></h4>
                                 </div>
                                 <div class="portfolio--cat"><a href="#">Web Development</a></div>
-                              
+
                             </div>
                         </div>
-                      
+
                     </div>
-                  
+
                 </div>
-              
+
             </div> -->
             <!-- . portfolio-item end -->
             
@@ -584,20 +614,20 @@
                             <div class="pos-vertical-center">
                                 <div class="portfolio--zoom">
                                     <a class="img-gallery-item" href="/assets/images/portfolio/grid/3col/more/15.jpg" title="Printing is an Art"></a>
-                                
+
                                 </div>
                                 <div class="portfolio--title">
                                     <h4><a href="#">Printing is an Art</a></h4>
                                 </div>
                                 <div class="portfolio--cat"><a href="#">Full Stack</a></div>
-                              
+
                             </div>
                         </div>
-                      
+
                     </div>
-                  
+
                 </div>
-              
+
             </div> -->
             <!-- . portfolio-item end -->
             
@@ -611,20 +641,20 @@
                             <div class="pos-vertical-center">
                                 <div class="portfolio--zoom">
                                     <a class="img-gallery-item" href="/assets/images/portfolio/grid/3col/more/16.jpg" title="View of my screen"></a>
-                                
+
                                 </div>
                                 <div class="portfolio--title">
                                     <h4><a href="#">View of my screen</a></h4>
                                 </div>
                                 <div class="portfolio--cat"><a href="#">Campaign</a>,<a href="#">Full Stack</a></div>
-                              
+
                             </div>
                         </div>
-                      
+
                     </div>
-                  
+
                 </div>
-              
+
             </div> -->
             <!-- . portfolio-item end -->
             
@@ -638,20 +668,20 @@
                             <div class="pos-vertical-center">
                                 <div class="portfolio--zoom">
                                     <a class="img-gallery-item" href="/assets/images/portfolio/grid/3col/more/17.jpg" title="Web development agency"></a>
-                                
+
                                 </div>
                                 <div class="portfolio--title">
                                     <h4><a href="#">Web development agency</a></h4>
                                 </div>
                                 <div class="portfolio--cat"><a href="#">Web Development</a></div>
-                              
+
                             </div>
                         </div>
-                      
+
                     </div>
-                  
+
                 </div>
-              
+
             </div> -->
             <!-- . portfolio-item end -->
             
@@ -665,20 +695,20 @@
                             <div class="pos-vertical-center">
                                 <div class="portfolio--zoom">
                                     <a class="img-gallery-item" href="/assets/images/portfolio/grid/3col/more/18.jpg" title="Web dev in 2018"></a>
-                                
+
                                 </div>
                                 <div class="portfolio--title">
                                     <h4><a href="#">Web dev in 2018</a></h4>
                                 </div>
                                 <div class="portfolio--cat"><a href="#">Web Development</a></div>
-                              
+
                             </div>
                         </div>
-                      
+
                     </div>
-                  
+
                 </div>
-              
+
             </div> -->
             <!-- . portfolio-item end -->
             
@@ -692,20 +722,20 @@
                             <div class="pos-vertical-center">
                                 <div class="portfolio--zoom">
                                     <a class="img-gallery-item" href="/assets/images/portfolio/grid/3col/more/19.jpg" title="Branding development"></a>
-                                
+
                                 </div>
                                 <div class="portfolio--title">
                                     <h4><a href="#">Branding development</a></h4>
                                 </div>
                                 <div class="portfolio--cat"><a href="#">Campaign</a>,<a href="#">Full Stack</a></div>
-                              
+
                             </div>
                         </div>
-                      
+
                     </div>
-                  
+
                 </div>
-              
+
             </div> -->
             <!-- . portfolio-item end -->
             
@@ -719,20 +749,20 @@
                             <div class="pos-vertical-center">
                                 <div class="portfolio--zoom">
                                     <a class="img-gallery-item" href="/assets/images/portfolio/grid/3col/more/20.jpg" title="Spa treatment in your home"></a>
-                                
+
                                 </div>
                                 <div class="portfolio--title">
                                     <h4><a href="#">Spa treatment in your home</a></h4>
                                 </div>
                                 <div class="portfolio--cat"><a href="#">Packaging</a></div>
-                              
+
                             </div>
                         </div>
-                      
+
                     </div>
-                  
+
                 </div>
-              
+
             </div> -->
             <!-- . portfolio-item end -->
             
@@ -746,20 +776,20 @@
                             <div class="pos-vertical-center">
                                 <div class="portfolio--zoom">
                                     <a class="img-gallery-item" href="/assets/images/portfolio/grid/3col/more/21.jpg" title="Nice Print title"></a>
-                                
+
                                 </div>
                                 <div class="portfolio--title">
                                     <h4><a href="#">Nice Print title</a></h4>
                                 </div>
                                 <div class="portfolio--cat"><a href="#">Full Stack</a></div>
-                              
+
                             </div>
                         </div>
-                      
+
                     </div>
-                  
+
                 </div>
-              
+
             </div> -->
             <!-- . portfolio-item end -->
             
@@ -774,6 +804,7 @@
         <a class="btn btn--secondary btn--bordered btn-more" href=""><span></span>Load More</a>
     </div>
 </div>
+
 
 
 
@@ -816,9 +847,49 @@
 </footer>
  </div><!-- #wrapper end -->
 
+<!-- Stylesheets
+============================================= -->
+<!--
+<link href="/css/external.css" rel="stylesheet" media="all">
+<link href="/css/bootstrap.min.css" rel="stylesheet" media="all">
+<link href="/css/main.css" rel="stylesheet" media="all">
+<link href="/css/patch-lighthouse.css" rel="stylesheet" media="all">
+-->
+
+<!-- RS5.0 Main Stylesheet -->
+<!--
+<link rel="stylesheet" type="text/css" href="/revolution/css/settings.css" media="all">
+<link rel="stylesheet" type="text/css" href="/revolution/css/layers.css" media="all">
+<link rel="stylesheet" type="text/css" href="/revolution/css/navigation.css" media="all">
+-->
 <!-- Fonts
  	============================================= -->
+<!--
 <link href="https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif" rel="stylesheet" type="text/css">
+-->
+<script>
+(function(){
+	// Eliminate render-blocking resources
+	// https://developers.google.com/web/tools/lighthouse/audits/blocking-resources
+	var files = [
+		"/css/external.css",
+		"/css/bootstrap.min.css",
+		"/css/main.css",
+		"/css/patch-lighthouse.css",
+		"/revolution/css/settings.css",
+		"/revolution/css/layers.css",
+		"/revolution/css/navigation.css",
+		"https://fonts.googleapis.com/css?family=Raleway:400,400i,500,600,700,700i,800%7COpen+Sans:300,300i,400,400i,600,600i,700,700i,800,800i%7CPlayfair+Display:400,400i,700,700i,900,900i%7CDroid+Serif"
+	];
+	files.forEach(function(href){
+		var node = document.createElement("link");
+		node.href = href;
+		node.rel = "stylesheet";
+		document.querySelector('head').appendChild(node);
+	})
+})()
+</script>
+
 
 <!-- Footer Scripts
 ============================================= -->
@@ -861,12 +932,14 @@ function googleTranslateElementInit() {
 
 <!-- Indemandly-->
 <script type="text/javascript">
-setTimeout(function() {
-	!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
-}, 10*1000);
+document.addEventListener("DOMContentLoaded", function(event) {
+	setTimeout(function() {
+		!function(d){var s=d.createElement('script');s.src='https://widget.indemand.ly/launcher.js';s.onload=function(){window.indemandly = new Indemandly({"domain":"jorge"});};var c=d.getElementsByTagName('script')[0];c.parentNode.insertBefore(s,c);}(document)
+	}, 10*1000);
+});
 </script>
 
-<script type = "text/javascript">
+<script type="text/javascript">
 	$(function () {
 		$('#scrollToBottom').bind("click", function () {
 			$('html, body').animate({ scrollTop: $(document).height() }, 4200);
@@ -879,8 +952,45 @@ setTimeout(function() {
 	});
 </script>
 
-<script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+	setTimeout(function(){
+		var x = retina();
+		if (x>1) {
+			document.querySelectorAll('img[data-img-retina]').forEach(img=>{
+				img.src = img.src.replace("x1.", "x"+x+".");
+			})
+		}
+		function retina() {
+			// http://imulus.github.io/retinajs/
+			// https://stackoverflow.com/questions/28374359/media-queries-for-2x-3x-and-4x-images
+			if (isRetina_3()) return 3;
+			if (isRetina_2()) return 2;
+			return 1;
+		}
+		function isRetina_2(){
+			if (window.devicePixelRatio > 1) return true;
+			var q = '(-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx)';
+	        if (window.matchMedia && window.matchMedia(q).matches) return true;
+		}
+		function isRetina_3(){
+			if (window.devicePixelRatio > 2) return true;
+			var q = '(-o-min-device-pixel-ratio: 9/4), (-webkit-min-device-pixel-ratio: 2.25), (min-device-pixel-ratio: 2.25), (min-resolution: 2.25dppx)';
+	        if (window.matchMedia && window.matchMedia(q).matches) return true;
+		}
+	},1*1000);
+});
+</script>
+<script type="text/javascript">
+document.addEventListener("DOMContentLoaded", function(event) {
+	Array.from(document.querySelectorAll('.module-content.module-hamburger'))
+	.forEach(function(v){
+		v.style.display = "";
+	});
+});
+</script>
 
+<script type="text/javascript">
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
              .register('/sw.js')
