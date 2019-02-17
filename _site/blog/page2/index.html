@@ -225,7 +225,7 @@
 			  			<source src="/assets/Working-Space/MP4/Working-Space.mp4" type="video/mp4" />Your browser does not support the video tag. I suggest you upgrade your browser.
 			  			<source src="/assets/Working-Space/WEBM/Working-Space.webm" type="video/webm" />Your browser does not support the video tag. I suggest you upgrade your browser.
 			  		`;
-			  	}, 5*1000);
+			  	}, 10*1000);
 			  });
 			  </script>
 <div class="container">
@@ -1013,7 +1013,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 			var q = '(-o-min-device-pixel-ratio: 9/4), (-webkit-min-device-pixel-ratio: 2.25), (min-device-pixel-ratio: 2.25), (min-resolution: 2.25dppx)';
 	        if (window.matchMedia && window.matchMedia(q).matches) return true;
 		}
-	},1*1000);
+	},5*1000);
 });
 </script>
 <script type="text/javascript">
@@ -1028,7 +1028,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 <script type="text/javascript">
   if('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('/sw.js')
+             .register('/js/sw.js')
              .then(function() { console.log("Service Worker Registered"); })
 			 .catch(function() {
 				 console.log("'/sw.js' not found, or something like this");
